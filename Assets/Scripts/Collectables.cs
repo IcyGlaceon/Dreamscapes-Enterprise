@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Collectables : MonoBehaviour
 {
-    int MaxCollectibles = 15;
+    [SerializeField] GameManager gameManager;
+   
 
     private void OnCollisionEnter2D(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-
+            gameManager.GainedCollectables++;
         }
     }
 }
