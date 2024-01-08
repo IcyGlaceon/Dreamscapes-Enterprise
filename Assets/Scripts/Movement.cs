@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] Rigidbody2D player;
 
+    bool isGrounded = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -17,14 +19,14 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            
-        }
+
     }
 
     public void Jump()
     {
-        player.velocity = (Vector2.up * 10);
+        if (isGrounded)
+        {
+            player.velocity = (Vector2.up * 10);
+        }
     }
 }
