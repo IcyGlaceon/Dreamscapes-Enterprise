@@ -5,7 +5,7 @@ using UnityEngine;
 public class Slowdown : MonoBehaviour
 {
 	[SerializeField] BackgroundMovement Movement;
-	[SerializeField] float SlowdownAmount = 0.8f;
+	[SerializeField] float SlowdownAmount = 0.5f;
 	private float originalSpeed = 0;
 
 	private void OnTriggerEnter2D(Collider2D collision)
