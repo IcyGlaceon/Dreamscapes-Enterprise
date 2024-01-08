@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class PolySecret : MonoBehaviour
 {
+    [SerializeField] GameManager gameManager;
+
     private void OnCollisionEnter2D(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            /*
-             * if (player.collectables = MaxCollectables)
-             * {
-             *      - Text about getting all the dreams -
-             * }
-             * else 
-             * {
-             *      - Text about getting some dreams -
-             * }
-             */
+            if (gameManager.GainedCollectables == gameManager.MaxCollectibles)
+            {
+                // Implement Poly saying "Congrats on getting all the dreams"
+            }
+            else
+            {
+                // Implement Poly saying "Thank you for collecting these dreams"
+            }
         }
     }
 }
