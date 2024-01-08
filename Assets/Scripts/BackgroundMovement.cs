@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundMovement : MonoBehaviour
 {
-    [SerializeField] float speed = 0;
+    [SerializeField] public float speed = 0;
 
     Vector2 movementTrans;
 
