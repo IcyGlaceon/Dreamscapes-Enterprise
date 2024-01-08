@@ -27,6 +27,15 @@ public class Movement : MonoBehaviour
         if (isGrounded)
         {
             player.velocity = (Vector2.up * 10);
+            isGrounded = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
         }
     }
 }
