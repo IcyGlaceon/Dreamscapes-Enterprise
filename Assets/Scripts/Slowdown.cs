@@ -14,6 +14,7 @@ public class Slowdown : MonoBehaviour
 		{
 			originalSpeed = Movement.speed;
 			Movement.speed = Movement.speed * SlowdownAmount;
+			Movement.tempSpeed = Movement.speed;
 		}
 	}
 
@@ -22,6 +23,7 @@ public class Slowdown : MonoBehaviour
 		if (collision.gameObject.tag == "Player")
 		{
 			Movement.speed = originalSpeed;
+			Movement.tempSpeed = originalSpeed;
 		}
 	}
 }
