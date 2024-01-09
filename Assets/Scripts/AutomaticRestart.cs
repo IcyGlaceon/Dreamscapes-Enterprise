@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AutomaticRestart : MonoBehaviour
@@ -18,8 +19,20 @@ public class AutomaticRestart : MonoBehaviour
             RestartUiUp = true;
         }
         if (Timer <= 0)
-        { 
-            // restart whatever
+        {
+            SceneManager.LoadScene("StartScreen");
         }
+    }
+
+	public void Reset()
+	{
+        Timer = 60;
+        RestartUI.SetActive(false);
+        RestartUiUp = false;
+	}
+
+    public void End()
+    {
+        Timer = 0;
     }
 }
