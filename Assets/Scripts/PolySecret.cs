@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static DialogSystem;
 
 public class PolySecret : MonoBehaviour
 {
@@ -12,11 +13,13 @@ public class PolySecret : MonoBehaviour
         {
             if (gameManager.GainedCollectables == gameManager.MaxCollectibles)
             {
-                // Implement Poly saying "Congrats on getting all the dreams"
+                string line = "Congrats on getting all the dreams";
+                StartCoroutine(DialogSystem.ShowDialog(line));
             }
             else
             {
-                // Implement Poly saying "Thank you for collecting these dreams"
+                string line = "Thank you for collecting these dreams";
+                StartCoroutine(DialogSystem.ShowDialog(line));
             }
         }
     }

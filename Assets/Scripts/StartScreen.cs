@@ -8,6 +8,6 @@ public class StartScreen : MonoBehaviour
 {
     public void CharacterSelection()
     {
-        SceneManager.LoadScene("CharacterSelection");
+        SceneManager.LoadScene("SampleScene");
     }
 }
