@@ -6,6 +6,8 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] Rigidbody2D player;
+    [SerializeField] Animator anim;
+    [SerializeField] CharacterSelection selection;
 
     bool isGrounded = false;
 
@@ -19,7 +21,12 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        anim.SetBool("IsBlue", selection.GetBlue());
+        anim.SetBool("IsGreen", selection.GetGreen());
+        anim.SetBool("IsCyan", selection.GetCyan());
+        anim.SetBool("IsRed", selection.GetRed());
+        anim.SetBool("IsPink", selection.GetPink());
+        anim.SetBool("IsYellow", selection.GetYellow());
     }
 
     public void Jump()
