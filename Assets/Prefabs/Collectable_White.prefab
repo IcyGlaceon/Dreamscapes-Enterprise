@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1948472725777202390}
   - component: {fileID: 2448054961335829313}
   m_Layer: 0
-  m_Name: Collectable_Pink
+  m_Name: Collectable_White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1d098203c3a24344f84bf456fc12374f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9a2ee73a09df8784a9e0528b94ec0249, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
