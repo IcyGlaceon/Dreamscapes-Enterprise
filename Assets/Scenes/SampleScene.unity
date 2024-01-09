@@ -1721,7 +1721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1539511584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2034,8 +2034,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 90, y: 0}
-  m_SizeDelta: {x: 800, y: 100}
+  m_AnchoredPosition: {x: 70, y: 0}
+  m_SizeDelta: {x: 760, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766049560
 MonoBehaviour:
@@ -2084,8 +2084,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2408,12 +2408,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 343850768314277039, guid: 8c165016646449448b728ac2577e7bfa, type: 3}
+      propertyPath: speed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 343850768314277039, guid: 8c165016646449448b728ac2577e7bfa, type: 3}
       propertyPath: voiceLineText
       value: 
       objectReference: {fileID: 1766049560}
     - target: {fileID: 2426632465684238660, guid: 8c165016646449448b728ac2577e7bfa, type: 3}
       propertyPath: m_Name
-      value: GameObject
+      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 4979313767416052792, guid: 8c165016646449448b728ac2577e7bfa, type: 3}
       propertyPath: m_LocalPosition.x
