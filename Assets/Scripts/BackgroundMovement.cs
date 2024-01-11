@@ -19,7 +19,7 @@ public class BackgroundMovement : MonoBehaviour
 
     void Update()
     {
-        if (!UI.active)
+        if (!UI.activeInHierarchy)
         {
             movementTrans += Vector2.left * speed * Time.deltaTime;
             transform.position = movementTrans;

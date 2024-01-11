@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour
                 player.position = new Vector2(storedPosition, player.position.y);
             }
             player.velocity = new Vector2(0, player.velocity.y);
-        }        
+        }
 
         anim.SetBool("IsBlue", selection.GetBlue());
         anim.SetBool("IsGreen", selection.GetGreen());
