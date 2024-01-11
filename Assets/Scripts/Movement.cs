@@ -31,12 +31,13 @@ public class Movement : MonoBehaviour
             player.position = new Vector2(storedPosition, player.position.y);
 		}
         player.velocity = new Vector2(0, player.velocity.y);
-        anim.SetBool("IsBlue", selection.GetBlue());
+
+        /*anim.SetBool("IsBlue", selection.GetBlue());
         anim.SetBool("IsGreen", selection.GetGreen());
         anim.SetBool("IsCyan", selection.GetCyan());
         anim.SetBool("IsRed", selection.GetRed());
         anim.SetBool("IsPink", selection.GetPink());
-        anim.SetBool("IsYellow", selection.GetYellow());
+        anim.SetBool("IsYellow", selection.GetYellow());*/
     }
 
     public void Jump()

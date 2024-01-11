@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1296444151, guid: 6122789374bf54e479ceee21b432b8a8, type: 3}
+  m_Sprite: {fileID: 1355732721, guid: 5d52219cffa1108448bcfdd0784e4e59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -147,7 +147,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.02, y: -0.05}
   serializedVersion: 2
   m_Radius: 0.5
 --- !u!114 &2411825620012278756
@@ -163,8 +163,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3966609214462012227}
+  world: {fileID: 0}
   anim: {fileID: 3643179731126522443}
-  selection: {fileID: 0}
+  selection: {fileID: 2721342222312284872, guid: e1360f176ab31484ca4d2017b0cf6045, type: 3}
 --- !u!95 &3643179731126522443
 Animator:
   serializedVersion: 5

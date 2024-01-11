@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CharacterSelection : MonoBehaviour
 {
-    [SerializeField] GameObject UI;
+    [SerializeField] Animator playerAnim;
 
     bool isBlue;
     bool isGreen;
@@ -17,7 +18,11 @@ public class CharacterSelection : MonoBehaviour
     public void BlueCharacter()
     {
         isBlue = true;
-        UI.SetActive(false);
+        SceneManager.LoadScene("SampleScene");
+
+        playerAnim.SetBool("IsBlue", isBlue);
+
+        //UI.SetActive(false);
     }
 
     public bool GetBlue()
@@ -28,7 +33,10 @@ public class CharacterSelection : MonoBehaviour
     public void GreenCharacter()
     {
         isGreen = true;
-        UI.SetActive(false);
+        SceneManager.LoadScene("SampleScene");
+
+        playerAnim.SetBool("IsGreen", isGreen);
+        //UI.SetActive(false);
     }
 
     public bool GetGreen()
@@ -39,7 +47,10 @@ public class CharacterSelection : MonoBehaviour
     public void CyanCharacter()
     {
         isCyan = true;
-        UI.SetActive(false);
+        SceneManager.LoadScene("SampleScene");
+
+        playerAnim.SetBool("IsCyan", isCyan);
+        //UI.SetActive(false);
     }
 
     public bool GetCyan()
@@ -50,7 +61,10 @@ public class CharacterSelection : MonoBehaviour
     public void PinkCharacter()
     {
         isPink = true;
-        UI.SetActive(false);
+        SceneManager.LoadScene("SampleScene");
+
+        playerAnim.SetBool("IsPink", isPink);
+        //UI.SetActive(false);
     }
 
     public bool GetPink()
@@ -61,7 +75,10 @@ public class CharacterSelection : MonoBehaviour
     public void RedCharacter()
     {
         isRed = true;
-        UI.SetActive(false);
+        SceneManager.LoadScene("SampleScene");
+
+        playerAnim.SetBool("IsRed", isRed);
+        //UI.SetActive(false);
     }
 
     public bool GetRed()
@@ -72,7 +89,10 @@ public class CharacterSelection : MonoBehaviour
     public void YellowCharacter()
     {
         isYellow = true;
-        UI.SetActive(false);
+        SceneManager.LoadScene("SampleScene");
+
+        playerAnim.SetBool("IsYellow", isYellow);
+        //UI.SetActive(false);
     }
 
     public bool GetYellow()
