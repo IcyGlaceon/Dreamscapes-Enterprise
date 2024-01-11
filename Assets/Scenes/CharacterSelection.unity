@@ -1582,7 +1582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82658348d5ed5f438f6a8276a07a56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 3643179731126522443, guid: 8bbfd8c873c1a064bb05244b27a2d47d, type: 3}
+  UI: {fileID: 0}
 --- !u!114 &1607210720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1885,7 +1885,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1446021476, guid: 6122789374bf54e479ceee21b432b8a8, type: 3}
+  m_Sprite: {fileID: 1284307221, guid: 5d52219cffa1108448bcfdd0784e4e59, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
