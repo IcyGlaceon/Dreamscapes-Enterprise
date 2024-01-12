@@ -14,12 +14,12 @@ public class PolySecret : MonoBehaviour
             if (gameManager.GainedCollectables == gameManager.MaxCollectibles)
             {
                 string line = "Congrats on getting all the dreams";
-                StartCoroutine(DialogSystem.ShowDialog(line));
+                //StartCoroutine(DialogSystem.ShowDialog(line));
             }
             else
             {
                 string line = "Thank you for collecting these dreams";
-                StartCoroutine(DialogSystem.ShowDialog(line));
+                //StartCoroutine(DialogSystem.ShowDialog(line));
             }
         }
     }

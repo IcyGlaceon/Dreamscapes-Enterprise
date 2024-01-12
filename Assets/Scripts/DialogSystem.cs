@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class DialogSystem : MonoBehaviour
 {
-    [SerializeField] static TMP_Text voiceLineText;
-    [SerializeField] static Image characterPicture;
-    [SerializeField] static float speed;
+    [SerializeField] TMP_Text voiceLineText;
+    [SerializeField] Image characterPicture;
+    [SerializeField] float speed;
 
     private string[] eraVoiceLines = {"Not many make it through the mirror maze. Still, I do not know your intentions. Many have tried hunting me to gain the power of wishing. None have succeeded. I am warning you: those with damaging dreams may not proceed further.",
         "What is a damaging dream? The ones that take instead of give. The dreams that crush dreams. You've seen the result. The dwindling. A dream cannot sustain itself on the destruction of other dreams for long. It turns into an emptiness that spreads and consumes.",
@@ -25,7 +25,7 @@ public class DialogSystem : MonoBehaviour
 
     }
 
-    public static IEnumerator ShowDialog(string dialog)
+    public IEnumerator ShowDialog(string dialog)
     {
         dialog.ToCharArray();
         float letterSpeed = speed;
