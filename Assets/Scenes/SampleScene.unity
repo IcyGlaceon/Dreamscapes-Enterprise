@@ -13928,6 +13928,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 383980059}
     - target: {fileID: 2411825620012278756, guid: 8bbfd8c873c1a064bb05244b27a2d47d, type: 3}
+      propertyPath: world
+      value: 
+      objectReference: {fileID: 1752424524}
+    - target: {fileID: 2411825620012278756, guid: 8bbfd8c873c1a064bb05244b27a2d47d, type: 3}
       propertyPath: selection
       value: 
       objectReference: {fileID: 383980060}
