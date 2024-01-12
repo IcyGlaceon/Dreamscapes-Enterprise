@@ -17,7 +17,7 @@ public class DialogSystem : MonoBehaviour
     void Start()
     {
         voiceLineText.text = "";
-        StartCoroutine(ShowDialog(eraVoiceLines[0]));
+        StartCoroutine(ShowDialog(eraVoiceLines[2]));
     }
 
     void Update()
