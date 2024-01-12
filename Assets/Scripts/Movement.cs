@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     [SerializeField] BackgroundMovement world;
     [SerializeField] Animator anim;
     [SerializeField] CharacterSelection selection;
+    [SerializeField] GameObject UI;
 
     bool isGrounded = false;
     float storedPosition = 0;
@@ -22,15 +23,19 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.position.x - storedPosition < -0.3 || player.position.x - storedPosition > 0.3)
+        if (!UI.active)
         {
-            if (world != null ) 
-            { 
-                world.MoveBack();
+            if (player.position.x - storedPosition < -0.3 || player.position.x - storedPosition > 0.3)
+            {
+                if (world != null)
+                {
+                    world.MoveBack();
+                }
+                player.position = new Vector2(storedPosition, player.position.y);
             }
-            player.position = new Vector2(storedPosition, player.position.y);
-		}
-        player.velocity = new Vector2(0, player.velocity.y);
+            player.velocity = new Vector2(0, player.velocity.y);
+        }
+
         anim.SetBool("IsBlue", selection.GetBlue());
         anim.SetBool("IsGreen", selection.GetGreen());
         anim.SetBool("IsCyan", selection.GetCyan());
