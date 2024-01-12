@@ -48,7 +48,7 @@ public class Movement : MonoBehaviour
     {
         if (isGrounded)
         {
-            player.velocity = (Vector2.up * 13);
+            player.velocity = (Vector2.up * 8);
             isGrounded = false;
         }
     }
