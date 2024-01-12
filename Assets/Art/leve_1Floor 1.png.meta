@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 19015271a67c20a4b92b2c9b7f4d3e81
+guid: 9bdd31a373f10fd44b7a832d5a2deadb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: leve_1Floor_0
+      name: leve_1Floor 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93e1edd352eeda546b16c107bde2d90a
-      internalID: -590239323
+      spriteID: 7733623419eab2348baeeb05aebe9089
+      internalID: 2067904008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leve_1Floor_1
+      name: leve_1Floor 1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa4097c95d3a26347be9495f7e03398f
-      internalID: 1400652779
+      spriteID: 98bc930fb4fc59746b0715dfa0e8845c
+      internalID: -1010297510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leve_1Floor_2
+      name: leve_1Floor 1_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa34c71bbbeaf8a4fa7f319b21213abb
-      internalID: 1267241465
+      spriteID: 0866b519c99f2404ebf76b1fdc0263f1
+      internalID: -411642777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leve_1Floor_3
+      name: leve_1Floor 1_3
       rect:
         serializedVersion: 2
         x: 32
@@ -187,18 +187,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30b109108cec1884a8edcd9d8fc4bfd7
-      internalID: -790660627
+      spriteID: c8701fa12609dfa4f801370493d5f07a
+      internalID: -1892968084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leve_1Floor_4
+      name: leve_1Floor 1_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -208,18 +208,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3ba363918326df4686d11e188bb6288
-      internalID: -1644001432
+      spriteID: 4664f53e5a53db849bf981e3c1f4445e
+      internalID: -1122806808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leve_1Floor_5
+      name: leve_1Floor 1_5
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -229,18 +229,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f49a1bcf4979a01468ec2c57c59f6e02
-      internalID: -860246123
+      spriteID: 20310b1711a2d434eab4d906b4357b44
+      internalID: 1801783526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: leve_1Floor_6
+      name: leve_1Floor 1_6
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ccd6dcb357ce9b4282b98c44ca3cec7
-      internalID: 741549516
+      spriteID: 218880906adbf3b409cf7271bcb0436a
+      internalID: -695813353
       vertices: []
       indices: 
       edges: []
@@ -267,13 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      leve_1Floor_0: -590239323
-      leve_1Floor_1: 1400652779
-      leve_1Floor_2: 1267241465
-      leve_1Floor_3: -790660627
-      leve_1Floor_4: -1644001432
-      leve_1Floor_5: -860246123
-      leve_1Floor_6: 741549516
+      leve_1Floor 1_0: 2067904008
+      leve_1Floor 1_1: -1010297510
+      leve_1Floor 1_2: -411642777
+      leve_1Floor 1_3: -1892968084
+      leve_1Floor 1_4: -1122806808
+      leve_1Floor 1_5: 1801783526
+      leve_1Floor 1_6: -695813353
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
