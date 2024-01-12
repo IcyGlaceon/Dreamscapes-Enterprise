@@ -7,6 +7,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class BackgroundMovement : MonoBehaviour
 {
     [SerializeField] public float speed = 0;
+    [SerializeField] GameObject UI;
     public float tempSpeed = 0;
     Vector2 movementTrans;
 
@@ -18,16 +19,19 @@ public class BackgroundMovement : MonoBehaviour
 
     void Update()
     {
-        movementTrans += Vector2.left * speed * Time.deltaTime;
-        transform.position = movementTrans;
-        if (tempSpeed > speed)
+        if (!UI.active)
         {
-            speed += 0.05f;
+            movementTrans += Vector2.left * speed * Time.deltaTime;
+            transform.position = movementTrans;
+            if (tempSpeed > speed)
+            {
+                speed += 0.05f;
+            }
+            else if (tempSpeed < speed)
+            {
+                speed = tempSpeed;
+            }
         }
-        else if (tempSpeed < speed) 
-        { 
-            speed = tempSpeed;
-		}
 	}
 
     public void MoveBack()
