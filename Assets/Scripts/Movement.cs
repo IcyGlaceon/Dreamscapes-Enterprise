@@ -30,6 +30,7 @@ public class Movement : MonoBehaviour
                 if (world != null)
                 {
                     world.MoveBack();
+                    isGrounded = false;
                 }
                 player.position = new Vector2(storedPosition, player.position.y);
             }
@@ -42,6 +43,11 @@ public class Movement : MonoBehaviour
         anim.SetBool("IsRed", selection.GetRed());
         anim.SetBool("IsPink", selection.GetPink());
         anim.SetBool("IsYellow", selection.GetYellow());
+
+        if (player.velocity.y < 0) 
+        {
+            isGrounded = false;
+        }
     }
 
     public void Jump()
