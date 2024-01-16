@@ -23,9 +23,9 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!UI.active)
+        if (player.position.x - storedPosition < -0.3 || player.position.x - storedPosition > 0.3)
         {
-            if (player.position.x - storedPosition < -0.3 || player.position.x - storedPosition > 0.3)
+            if (world != null)
             {
                 if (world != null)
                 {
@@ -34,20 +34,16 @@ public class Movement : MonoBehaviour
                 }
                 player.position = new Vector2(storedPosition, player.position.y);
             }
-            player.velocity = new Vector2(0, player.velocity.y);
+            player.position = new Vector2(storedPosition, player.position.y);
         }
+        player.velocity = new Vector2(0, player.velocity.y);
 
-        anim.SetBool("IsBlue", selection.GetBlue());
-        anim.SetBool("IsGreen", selection.GetGreen());
-        anim.SetBool("IsCyan", selection.GetCyan());
-        anim.SetBool("IsRed", selection.GetRed());
-        anim.SetBool("IsPink", selection.GetPink());
-        anim.SetBool("IsYellow", selection.GetYellow());
-
-        if (player.velocity.y < 0) 
-        {
-            isGrounded = false;
-        }
+        anim.SetBool("IsBlue", ScenesTrans.blueCharacter);
+        anim.SetBool("IsGreen", ScenesTrans.greenCharacter);
+        anim.SetBool("IsCyan", ScenesTrans.cyanCharacter);
+        anim.SetBool("IsRed", ScenesTrans.redCharacter);
+        anim.SetBool("IsPink", ScenesTrans.pinkCharacter);
+        anim.SetBool("IsYellow", ScenesTrans.yellowCharacter);
     }
 
     public void Jump()

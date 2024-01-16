@@ -114,7 +114,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &936142991485568730
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -165,7 +165,8 @@ MonoBehaviour:
   player: {fileID: 3966609214462012227}
   world: {fileID: 0}
   anim: {fileID: 3643179731126522443}
-  selection: {fileID: 2721342222312284872, guid: e1360f176ab31484ca4d2017b0cf6045, type: 3}
+  selection: {fileID: 8094118622127262790, guid: 5e8b13727c3444246a2a12b74794ef8f, type: 3}
+  UI: {fileID: 0}
 --- !u!95 &3643179731126522443
 Animator:
   serializedVersion: 5
