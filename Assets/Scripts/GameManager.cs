@@ -5,10 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] TMP_Text collectText;
-
     public static GameManager Instance;
-    public static int currentCollectables = 0;
     public static bool pinkCharacter = false;
     public static bool blueCharacter = false;
     public static bool greenCharacter = false;
@@ -22,6 +19,7 @@ public class GameManager : MonoBehaviour
     {
         if (Instance != null)
         {
+            Instance = this;
             Destroy(gameObject);
             return;
         }
@@ -37,6 +35,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        collectText.text = GainedCollectables.ToString();
+        
     }
 }

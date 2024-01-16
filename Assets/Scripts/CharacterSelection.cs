@@ -9,37 +9,37 @@ public class CharacterSelection : MonoBehaviour
 
     public void BlueCharacter()
     {
-        ScenesTrans.blueCharacter = true;
+        GameManager.blueCharacter = true;
         SceneManager.LoadScene(0);
     }
 
     public void GreenCharacter()
     {
-        ScenesTrans.greenCharacter = true;
+        GameManager.greenCharacter = true;
         SceneManager.LoadScene(0);
     }
 
     public void CyanCharacter()
     {
-        ScenesTrans.cyanCharacter = true;
+        GameManager.cyanCharacter = true;
         SceneManager.LoadScene(0);
     }
 
     public void PinkCharacter()
     {
-        ScenesTrans.pinkCharacter = true; 
+        GameManager.pinkCharacter = true; 
         SceneManager.LoadScene(0);
     }
 
     public void RedCharacter()
     {
-        ScenesTrans.redCharacter = true;
+        GameManager.redCharacter = true;
         SceneManager.LoadScene(0);
     }
 
     public void YellowCharacter()
     {
-        ScenesTrans.yellowCharacter = true;
+        GameManager.yellowCharacter = true;
         SceneManager.LoadScene(0);
     }
     
