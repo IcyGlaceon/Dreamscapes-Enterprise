@@ -24,28 +24,23 @@ public class BackgroundMovement : MonoBehaviour
     {
         movementTrans += Vector2.left * speed * Time.deltaTime;
         transform.position = movementTrans;
-        if (tempSpeed > speed)
+        if (maxSpeed > speed)
         {
-            movementTrans += Vector2.left * speed * Time.deltaTime;
-            transform.position = movementTrans;
-            if (maxSpeed > speed)
+            if (slow)
             {
-                if (slow)
-                {
-                    if (slowSpeed > speed)
-                    {
-                        speed += 0.05f;
-                    }
-                }
-                else
+                if (slowSpeed > speed)
                 {
                     speed += 0.05f;
                 }
             }
-            else if (maxSpeed < speed)
+            else
             {
-                speed = maxSpeed;
+                speed += 0.05f;
             }
+        }
+        else if (maxSpeed < speed)
+        {
+            speed = maxSpeed;
         }
 	}
 
