@@ -8,13 +8,16 @@ public class BackgroundMovement : MonoBehaviour
 {
     [SerializeField] public float speed = 0;
     [SerializeField] GameObject UI;
-    public float tempSpeed = 0;
+    public bool slow = false;
+    public float slowSpeed;
+    private float maxSpeed;
     Vector2 movementTrans;
 
     void Start()
     {
         movementTrans = transform.position;
-        tempSpeed = speed;
+        slowSpeed = speed / 2;
+        maxSpeed = speed;
     }
 
     void Update()
@@ -23,22 +26,34 @@ public class BackgroundMovement : MonoBehaviour
         {
             movementTrans += Vector2.left * speed * Time.deltaTime;
             transform.position = movementTrans;
-            if (tempSpeed > speed)
+            if (maxSpeed > speed)
             {
-                speed += 0.05f;
+                if (slow)
+                {
+                    if (slowSpeed > speed)
+                    {
+                        speed += 0.05f;
+                    }
+                }
+                else
+                {
+                    speed += 0.05f;
+                }
             }
-            else if (tempSpeed < speed)
+            else if (maxSpeed < speed)
             {
-                speed = tempSpeed;
+                speed = maxSpeed;
             }
         }
 	}
 
     public void MoveBack()
     {
-        transform.position = new Vector2(transform.position.x + 0.3f, 0);
-        movementTrans = transform.position;
-        tempSpeed = speed;
-        speed = -4;
+        if(speed == maxSpeed) 
+        { 
+            transform.position = new Vector2(transform.position.x + 0.3f, 0);
+            movementTrans = transform.position;
+            speed = -4;
+        }
     }
 }

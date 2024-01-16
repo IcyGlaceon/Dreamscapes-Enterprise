@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class Collectables : MonoBehaviour
 {
-    [SerializeField] GameManager gameManager;
-   
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            gameManager.GainedCollectables++;
+            GameManager.GainedCollectables++;
             Destroy(gameObject);
         }
     }
