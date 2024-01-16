@@ -7,76 +7,40 @@ public class CharacterSelection : MonoBehaviour
 {
     [SerializeField] GameObject UI;
 
-    bool isBlue;
-    bool isGreen;
-    bool isCyan;
-    bool isPink;
-    bool isRed;
-    bool isYellow;
-
     public void BlueCharacter()
     {
-        isBlue = true;
-        UI.SetActive(false);
-    }
-
-    public bool GetBlue()
-    {
-        return isBlue;
+        ScenesTrans.blueCharacter = true;
+        SceneManager.LoadScene(0);
     }
 
     public void GreenCharacter()
     {
-        isGreen = true;
-        UI.SetActive(false);
-    }
-
-    public bool GetGreen()
-    {
-        return isGreen;
+        ScenesTrans.greenCharacter = true;
+        SceneManager.LoadScene(0);
     }
 
     public void CyanCharacter()
     {
-        isCyan = true;
-        UI.SetActive(false);
-    }
-
-    public bool GetCyan()
-    {
-        return isCyan;
+        ScenesTrans.cyanCharacter = true;
+        SceneManager.LoadScene(0);
     }
 
     public void PinkCharacter()
     {
-        isPink = true;
-        UI.SetActive(false);
-    }
-
-    public bool GetPink()
-    {
-        return isPink;
+        ScenesTrans.pinkCharacter = true; 
+        SceneManager.LoadScene(0);
     }
 
     public void RedCharacter()
     {
-        isRed = true;
-        UI.SetActive(false);
-    }
-
-    public bool GetRed()
-    {
-        return isRed;
+        ScenesTrans.redCharacter = true;
+        SceneManager.LoadScene(0);
     }
 
     public void YellowCharacter()
     {
-        isYellow = true;
-        UI.SetActive(false);
+        ScenesTrans.yellowCharacter = true;
+        SceneManager.LoadScene(0);
     }
-
-    public bool GetYellow()
-    {
-        return isYellow;
-    }
+    
 }

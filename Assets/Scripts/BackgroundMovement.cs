@@ -19,18 +19,15 @@ public class BackgroundMovement : MonoBehaviour
 
     void Update()
     {
-        if (!UI.active)
+        movementTrans += Vector2.left * speed * Time.deltaTime;
+        transform.position = movementTrans;
+        if (tempSpeed > speed)
         {
-            movementTrans += Vector2.left * speed * Time.deltaTime;
-            transform.position = movementTrans;
-            if (tempSpeed > speed)
-            {
-                speed += 0.05f;
-            }
-            else if (tempSpeed < speed)
-            {
-                speed = tempSpeed;
-            }
+            speed += 0.05f;
+        }
+        else if (tempSpeed < speed)
+        {
+            speed = tempSpeed;
         }
 	}
 
