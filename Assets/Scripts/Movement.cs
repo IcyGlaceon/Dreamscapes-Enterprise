@@ -26,16 +26,17 @@ public class Movement : MonoBehaviour
         {
             if (world != null)
             {
-                if (world != null)
-                {
-                    world.MoveBack();
-                    isGrounded = false;
-                }
-                player.position = new Vector2(storedPosition, player.position.y);
+                world.MoveBack();
+                isGrounded = false;
             }
             player.position = new Vector2(storedPosition, player.position.y);
         }
         player.velocity = new Vector2(0, player.velocity.y);
+
+        if (player.velocity.y < 0)
+        {
+            isGrounded = false;
+        }
 
         anim.SetBool("IsBlue", GameManager.blueCharacter);
         anim.SetBool("IsGreen", GameManager.greenCharacter);

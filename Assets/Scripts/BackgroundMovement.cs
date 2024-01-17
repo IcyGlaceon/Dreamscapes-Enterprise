@@ -10,7 +10,7 @@ public class BackgroundMovement : MonoBehaviour
     [SerializeField] GameObject UI;
     public bool slow = false;
     public float slowSpeed;
-    private float maxSpeed;
+    public float maxSpeed;
     Vector2 movementTrans;
 
     void Start()
