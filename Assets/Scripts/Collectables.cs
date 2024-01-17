@@ -13,7 +13,7 @@ public class Collectables : MonoBehaviour
             GameManager.GainedCollectables++;
             if (collectionParticle)
             { 
-                //Instantiate(collectionParticle, Collectables.transform.position, Collectables.transform.rotation);
+                Instantiate(collectionParticle, FindObjectOfType<Movement>().transform.position, collectionParticle.transform.rotation);
             }
             Destroy(gameObject);
         }
