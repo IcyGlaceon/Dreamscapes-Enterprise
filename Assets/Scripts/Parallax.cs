@@ -4,32 +4,38 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    private float length;
-    private float startpos;
-    public GameObject cam;
-    public float parallaxEffect;
+    [SerializeField] float moveSpeed;
 
-    // Start is called before the first frame update
+    float singleTextureWidth;
+
     void Start()
     {
-        startpos = transform.position.x;
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
+        SetupTexture();
+        moveSpeed = -moveSpeed;
     }
 
-    private void FixedUpdate()
+    void SetupTexture()
     {
-        float temp = (cam.transform.position.x * (1 - parallaxEffect));
-        float dist = (cam.transform.position.x * parallaxEffect);
+        Sprite sprite = GetComponent<SpriteRenderer>().sprite;
+        singleTextureWidth = sprite.texture.width / sprite.pixelsPerUnit;
+    }
 
-        transform.position = new Vector3(startpos + dist, transform.position.y, transform.position.z);
+    void Scroll()
+    {
+        float delta = moveSpeed * Time.deltaTime;
+        transform.position += new Vector3(delta, 0, 0);
+    }
 
-        if (temp > startpos + length)
+    void CheckReset()
+    {
+        if ((Mathf.Abs(transform.position.x) - singleTextureWidth) > 0)
         {
-            startpos += length;
+            transform.position = new Vector3(0, transform.position.y, transform.position.z);
         }
-        else if (temp < startpos + length)
-        {
-            startpos -= length;
-        }
+    }
+    private void Update()
+    {
+        Scroll();
+        CheckReset();
     }
 }
