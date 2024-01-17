@@ -38,6 +38,7 @@ public class Movement : MonoBehaviour
             isGrounded = false;
         }
 
+
         anim.SetBool("IsBlue", GameManager.blueCharacter);
         anim.SetBool("IsGreen", GameManager.greenCharacter);
         anim.SetBool("IsCyan", GameManager.cyanCharacter);
@@ -60,7 +61,7 @@ public class Movement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ground")
         {
-            anim.SetBool("IsGrounded", true);
+            anim.SetBool("IsRunning", true);
             isGrounded = true;
         }
     }
