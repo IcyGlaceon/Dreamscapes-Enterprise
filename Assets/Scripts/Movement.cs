@@ -34,6 +34,11 @@ public class Movement : MonoBehaviour
         }
         player.velocity = new Vector2(0, player.velocity.y);
 
+        if (player.velocity.y < 0)
+        {
+            isGrounded = false;
+        }
+
         anim.SetBool("IsBlue", GameManager.blueCharacter);
         anim.SetBool("IsGreen", GameManager.greenCharacter);
         anim.SetBool("IsCyan", GameManager.cyanCharacter);
