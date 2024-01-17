@@ -27,23 +27,24 @@ public class Movement : MonoBehaviour
         {
             if (world != null)
             {
-                if (world != null)
-                {
-                    world.MoveBack();
-                    isGrounded = false;
-                }
-                player.position = new Vector2(storedPosition, player.position.y);
+                world.MoveBack();
+                isGrounded = false;
             }
             player.position = new Vector2(storedPosition, player.position.y);
         }
         player.velocity = new Vector2(0, player.velocity.y);
 
-        anim.SetBool("IsBlue", GameManager.blueCharacter);
-        anim.SetBool("IsGreen", GameManager.greenCharacter);
-        anim.SetBool("IsCyan", GameManager.cyanCharacter);
-        anim.SetBool("IsRed", GameManager.redCharacter);
-        anim.SetBool("IsPink", GameManager.pinkCharacter);
-        anim.SetBool("IsYellow", GameManager.yellowCharacter);
+        if (player.velocity.y < 0)
+        {
+            isGrounded = false;
+        }
+
+        anim.SetBool("IsBlue", ScenesTrans.blueCharacter);
+        anim.SetBool("IsGreen", ScenesTrans.greenCharacter);
+        anim.SetBool("IsCyan", ScenesTrans.cyanCharacter);
+        anim.SetBool("IsRed", ScenesTrans.redCharacter);
+        anim.SetBool("IsPink", ScenesTrans.pinkCharacter);
+        anim.SetBool("IsYellow", ScenesTrans.yellowCharacter);
     }
 
     public void Jump()
