@@ -39,12 +39,12 @@ public class Movement : MonoBehaviour
             isGrounded = false;
         }
 
-        anim.SetBool("IsBlue", ScenesTrans.blueCharacter);
-        anim.SetBool("IsGreen", ScenesTrans.greenCharacter);
-        anim.SetBool("IsCyan", ScenesTrans.cyanCharacter);
-        anim.SetBool("IsRed", ScenesTrans.redCharacter);
-        anim.SetBool("IsPink", ScenesTrans.pinkCharacter);
-        anim.SetBool("IsYellow", ScenesTrans.yellowCharacter);
+        anim.SetBool("IsBlue", GameManager.blueCharacter);
+        anim.SetBool("IsGreen", GameManager.greenCharacter);
+        anim.SetBool("IsCyan", GameManager.cyanCharacter);
+        anim.SetBool("IsRed", GameManager.redCharacter);
+        anim.SetBool("IsPink", GameManager.pinkCharacter);
+        anim.SetBool("IsYellow", GameManager.yellowCharacter);
     }
 
     public void Jump()
