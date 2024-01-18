@@ -42,5 +42,10 @@ public class CharacterSelection : MonoBehaviour
         GameManager.yellowCharacter = true;
         SceneManager.LoadScene(2);
     }
-    
+
+    public void Start()
+    {
+        GameManager.GainedCollectables = 0;
+    }
+
 }
