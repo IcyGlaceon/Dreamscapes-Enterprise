@@ -507,7 +507,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2127093238}
   m_Father: {fileID: 744439638}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
@@ -1582,7 +1583,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLineText: {fileID: 1766049560}
-  characterPicture: {fileID: 0}
+  characterPicture: {fileID: 1858281696}
+  characterSprites:
+  - {fileID: 21300000, guid: ffc4263d8d1421a478001a18c6f55fb4, type: 3}
+  - {fileID: 21300000, guid: b93f638cf060ce74097b6cacf5bd4826, type: 3}
+  - {fileID: 21300000, guid: afe08b9ccfb4eeb4496d8f4d4bf90f43, type: 3}
+  - {fileID: 21300000, guid: 05159d33323e7d243aa68cf06cb0bdb0, type: 3}
   speed: 0.05
   audioSource: {fileID: 480544669}
   voiceLines:
@@ -2338,7 +2344,6 @@ RectTransform:
   - {fileID: 1381717700}
   - {fileID: 1929081652}
   - {fileID: 169445904}
-  - {fileID: 2127093238}
   m_Father: {fileID: 1539511587}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -15516,16 +15521,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127093237}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 744439638}
+  m_Father: {fileID: 169445904}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -40, y: -10}
+  m_AnchoredPosition: {x: 19.999996, y: 0.00002670288}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2127093239
