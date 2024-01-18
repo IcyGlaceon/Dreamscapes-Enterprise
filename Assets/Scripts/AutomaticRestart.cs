@@ -22,6 +22,11 @@ public class AutomaticRestart : MonoBehaviour
         {
             SceneManager.LoadScene("StartScreen");
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        { 
+            Application.Quit();
+        }
     }
 
 	public void Reset()
@@ -35,4 +40,6 @@ public class AutomaticRestart : MonoBehaviour
     {
         Timer = 0;
     }
+
+    
 }
