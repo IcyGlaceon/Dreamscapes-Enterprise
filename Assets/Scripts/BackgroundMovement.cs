@@ -11,6 +11,7 @@ public class BackgroundMovement : MonoBehaviour
     public bool slow = false;
     public float slowSpeed;
     public float maxSpeed;
+    public bool bouncedBack = false;
     Vector2 movementTrans;
 
     void Start()
@@ -42,12 +43,15 @@ public class BackgroundMovement : MonoBehaviour
         {
             speed = maxSpeed;
         }
+
+        bouncedBack = false;
 	}
 
     public void MoveBack()
     {
         if(speed == maxSpeed) 
         { 
+            bouncedBack = true;
             transform.position = new Vector2(transform.position.x + 0.3f, 0);
             movementTrans = transform.position;
             speed = -4;
