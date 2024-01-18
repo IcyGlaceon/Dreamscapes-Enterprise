@@ -37,6 +37,12 @@ public class Movement : MonoBehaviour
         {
             isGrounded = false;
         }
+        if(player.velocity.y <= -1)
+        {
+            anim.SetBool("IsRunning", false);
+            anim.SetBool("IsFalling", true);
+        }
+        Debug.Log(player.velocity.y);
 
 
         anim.SetBool("IsBlue", GameManager.blueCharacter);
@@ -52,6 +58,7 @@ public class Movement : MonoBehaviour
         if (isGrounded)
         {
             anim.SetTrigger("Jump");
+            anim.SetBool("IsRunning", false);
             player.velocity = (Vector2.up * 8);
             isGrounded = false;
         }
@@ -63,6 +70,7 @@ public class Movement : MonoBehaviour
         {
             anim.SetBool("IsRunning", true);
             isGrounded = true;
+            anim.SetBool("IsFalling", false);
         }
     }
 }
