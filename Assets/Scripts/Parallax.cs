@@ -59,8 +59,8 @@ public class Parallax : MonoBehaviour
             {
                 if (BGMovement.bouncedBack == false && moveSpeed > originalSpeed)
                 {
-                    Debug.Log("aaaaaaa");
-                    moveSpeed -= (originalSpeed / 60);
+                    //Debug.Log("aaaaaaa");
+                    moveSpeed += (originalSpeed / 60);
                 }
                 else
                 {
@@ -78,7 +78,7 @@ public class Parallax : MonoBehaviour
         {
             moveSpeed = 0;
         }
-        else
+        else if (BGMovement.speed != 0 && moveSpeed == 0)
         {
             moveSpeed = originalSpeed;
         }
