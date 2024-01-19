@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e3ad723aa01143143a233d315bea2785, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -166,7 +166,6 @@ MonoBehaviour:
   world: {fileID: 0}
   anim: {fileID: 3643179731126522443}
   selection: {fileID: 8094118622127262790, guid: 5e8b13727c3444246a2a12b74794ef8f, type: 3}
-  UI: {fileID: 0}
 --- !u!95 &3643179731126522443
 Animator:
   serializedVersion: 5
