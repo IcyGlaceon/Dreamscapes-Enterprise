@@ -53,17 +53,34 @@ public class Parallax : MonoBehaviour
         {
             if (BGMovement.bouncedBack == true)
             {
-                Debug.Log("aaaaa");
                 moveSpeed = backwardsSpeed;
             }
             else
             {
-                moveSpeed = originalSpeed;
+                if (BGMovement.bouncedBack == false && moveSpeed > originalSpeed)
+                {
+                    Debug.Log("aaaaaaa");
+                    moveSpeed -= (originalSpeed / 60);
+                }
+                else
+                {
+                    moveSpeed = originalSpeed;
+                }
+                
             }
         }
         else
         {
             moveSpeed = slowSpeed;
+        }
+
+        if(BGMovement.speed == 0)
+        {
+            moveSpeed = 0;
+        }
+        else
+        {
+            moveSpeed = originalSpeed;
         }
     }
 }
