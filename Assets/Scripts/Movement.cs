@@ -9,7 +9,6 @@ public class Movement : MonoBehaviour
     [SerializeField] BackgroundMovement world;
     [SerializeField] Animator anim;
     [SerializeField] CharacterSelection selection;
-    [SerializeField] GameObject UI;
 
     bool isGrounded = false;
     float storedPosition = 0;
@@ -38,6 +37,13 @@ public class Movement : MonoBehaviour
         {
             isGrounded = false;
         }
+        if(player.velocity.y <= -1)
+        {
+            anim.SetBool("IsRunning", false);
+            anim.SetBool("IsFalling", true);
+        }
+        Debug.Log(player.velocity.y);
+
 
         anim.SetBool("IsBlue", GameManager.blueCharacter);
         anim.SetBool("IsGreen", GameManager.greenCharacter);
@@ -51,6 +57,8 @@ public class Movement : MonoBehaviour
     {
         if (isGrounded)
         {
+            anim.SetTrigger("Jump");
+            anim.SetBool("IsRunning", false);
             player.velocity = (Vector2.up * 8);
             isGrounded = false;
         }
@@ -60,7 +68,9 @@ public class Movement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ground")
         {
+            anim.SetBool("IsRunning", true);
             isGrounded = true;
+            anim.SetBool("IsFalling", false);
         }
     }
 }

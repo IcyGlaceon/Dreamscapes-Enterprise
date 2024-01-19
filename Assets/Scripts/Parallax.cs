@@ -1,17 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
+    [SerializeField] Movement movement;
+    [SerializeField] BackgroundMovement BGMovement;
+    [SerializeField] float SlowdownAmount = 0.5f;
 
     float singleTextureWidth;
+    float originalSpeed;
+    float slowSpeed;
+    public float backwardsSpeed;
 
     void Start()
     {
         SetupTexture();
         moveSpeed = -moveSpeed;
+        originalSpeed = moveSpeed;
+        slowSpeed = moveSpeed * SlowdownAmount;
+        backwardsSpeed = moveSpeed * -1.3f;
     }
 
     void SetupTexture()
@@ -33,9 +43,27 @@ public class Parallax : MonoBehaviour
             transform.position = new Vector3(0, transform.position.y, transform.position.z);
         }
     }
+
     private void Update()
     {
         Scroll();
         CheckReset();
+
+        if (BGMovement.slow == false)
+        {
+            if (BGMovement.bouncedBack == true)
+            {
+                Debug.Log("aaaaa");
+                moveSpeed = backwardsSpeed;
+            }
+            else
+            {
+                moveSpeed = originalSpeed;
+            }
+        }
+        else
+        {
+            moveSpeed = slowSpeed;
+        }
     }
 }
