@@ -50,8 +50,9 @@ public class BackgroundMovement : MonoBehaviour
     public void MoveBack()
     {
         if(speed == maxSpeed) 
-        { 
+        {
             bouncedBack = true;
+            Debug.Log("bounced: " + bouncedBack);
             transform.position = new Vector2(transform.position.x + 0.3f, 0);
             movementTrans = transform.position;
             speed = -4;
