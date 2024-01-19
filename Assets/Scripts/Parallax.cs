@@ -12,7 +12,8 @@ public class Parallax : MonoBehaviour
 
     float singleTextureWidth;
     float originalSpeed;
-    public float slowSpeed;
+    float slowSpeed;
+    public float backwardsSpeed;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class Parallax : MonoBehaviour
         moveSpeed = -moveSpeed;
         originalSpeed = moveSpeed;
         slowSpeed = moveSpeed * SlowdownAmount;
+        backwardsSpeed = moveSpeed * -1.3f;
     }
 
     void SetupTexture()
@@ -47,24 +49,21 @@ public class Parallax : MonoBehaviour
         Scroll();
         CheckReset();
 
-        if (BGMovement.slow == true)// && moveSpeed != slowSpeed)
+        if (BGMovement.slow == false)
+        {
+            if (BGMovement.bouncedBack == true)
+            {
+                Debug.Log("aaaaa");
+                moveSpeed = backwardsSpeed;
+            }
+            else
+            {
+                moveSpeed = originalSpeed;
+            }
+        }
+        else
         {
             moveSpeed = slowSpeed;
-        }
-
-        if (BGMovement.slow == false && moveSpeed != originalSpeed)
-        {
-            moveSpeed = originalSpeed;
-        }
-
-        if (BGMovement.bouncedBack == true)
-        {
-            moveSpeed = 4;
-        } 
-
-        if (BGMovement.bouncedBack == false)
-        {
-            moveSpeed = originalSpeed;
         }
     }
 }

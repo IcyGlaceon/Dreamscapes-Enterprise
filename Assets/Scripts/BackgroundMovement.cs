@@ -42,10 +42,11 @@ public class BackgroundMovement : MonoBehaviour
         else if (maxSpeed < speed)
         {
             speed = maxSpeed;
+            bouncedBack = false;
+
         }
 
-        bouncedBack = false;
-	}
+    }
 
     public void MoveBack()
     {
