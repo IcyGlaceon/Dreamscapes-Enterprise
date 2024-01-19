@@ -42,7 +42,7 @@ public class Movement : MonoBehaviour
             anim.SetBool("IsRunning", false);
             anim.SetBool("IsFalling", true);
         }
-        Debug.Log(player.velocity.y);
+        // Debug.Log(player.velocity.y);
 
 
         anim.SetBool("IsBlue", GameManager.blueCharacter);
