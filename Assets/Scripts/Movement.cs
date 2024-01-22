@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         storedPosition = player.position.x;
+        //anim.SetBool("IsBlue", true);
     }
 
     // Update is called once per frame
