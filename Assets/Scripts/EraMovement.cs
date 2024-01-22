@@ -25,6 +25,7 @@ public class EraMovement : MonoBehaviour
             if (wait < 0)
             {
                 movementTrans += Vector2.right * speed * Time.deltaTime;
+                background.maxSpeed = 3;
                 transform.position = movementTrans;
                 dieTime -= Time.deltaTime;
                 if (dieTime < 0) Destroy(gameObject);
