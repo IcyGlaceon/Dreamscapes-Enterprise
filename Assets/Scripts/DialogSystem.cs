@@ -29,7 +29,7 @@ public class DialogSystem : MonoBehaviour
     {
         voiceLineText.text = "";
         characterPicture.SetActive(false);
-        if(GameManager.currentLevel == 0) StartCoroutine(ShowDialog(eraVoiceLineBeginning, eraFaces1, voiceLines[3]));
+        //if(GameManager.currentLevel == 0) StartCoroutine(ShowDialog(eraVoiceLineBeginning, eraFaces1, voiceLines[3]));
     }
 
     void Update()
