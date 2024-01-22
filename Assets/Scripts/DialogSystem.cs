@@ -25,14 +25,11 @@ public class DialogSystem : MonoBehaviour
     private int[] eraFaces2 = { 1, 1, 0 };
     private int[] eraFaces3 = { 1, 3, 3, 0, 0 };
 
-    private int currentLevel;
-
     void Start()
     {
-        currentLevel = -1;
         voiceLineText.text = "";
         characterPicture.SetActive(false);
-        StartCoroutine(ShowDialog(eraVoiceLineBeginning, eraFaces1, voiceLines[3]));
+        if(GameManager.currentLevel == 0) StartCoroutine(ShowDialog(eraVoiceLineBeginning, eraFaces1, voiceLines[3]));
     }
 
     void Update()
@@ -46,7 +43,7 @@ public class DialogSystem : MonoBehaviour
         characterPicture.SetActive(true);
         audioSource.clip = voiceLine;
         audioSource.Play();
-        currentLevel++;
+        GameManager.currentLevel++;
         for (int i = 0; i < dialog.Length; i++)
         {
             characterImage.sprite = characterSprites[faceNumbers[i]];
@@ -59,12 +56,12 @@ public class DialogSystem : MonoBehaviour
             voiceLineText.text = "";
         }
         characterPicture.SetActive(false);
-        if(currentLevel!=0) SceneManager.LoadSceneAsync("Level" +  currentLevel);
+        if(GameManager.currentLevel !=0) SceneManager.LoadSceneAsync("Level" + GameManager.currentLevel);
     }
 
     public void showLevelDialog(int level)
     {
-        currentLevel = level;
+        GameManager.currentLevel = level;
         switch(level)
         {
             case 0:
