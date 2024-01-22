@@ -8,12 +8,16 @@ public class StopPlayer : MonoBehaviour
 	[Header("Dialog")]
 	[SerializeField] DialogSystem dialogSystem;
 	[SerializeField] int levelNumber;
-	private void OnTriggerEnter2D(Collider2D collision)
+    [Header("Era")]
+    [SerializeField] EraMovement eraMovement;
+
+    private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.tag == "Player")
 		{
 			Background.maxSpeed = 0;
 			dialogSystem.showLevelDialog(levelNumber);
+			eraMovement.move = true;
 		}
 	}
 } 

@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D))]
 public class EraMovement : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] BackgroundMovement background;
+    [SerializeField] float wait = 15;
 
     Vector2 movementTrans;
-    bool move = false;
+    [HideInInspector] public bool move = false;
     float dieTime = 3;
 
     void Start()
@@ -21,23 +21,19 @@ public class EraMovement : MonoBehaviour
     {
         if(move)
         {
-            movementTrans += Vector2.right * speed * Time.deltaTime;
-            transform.position = movementTrans;
-            dieTime -= Time.deltaTime;
-            if(dieTime < 0) Destroy(gameObject);
+            wait -= Time.deltaTime;
+            if (wait < 0)
+            {
+                movementTrans += Vector2.right * speed * Time.deltaTime;
+                transform.position = movementTrans;
+                dieTime -= Time.deltaTime;
+                if (dieTime < 0) Destroy(gameObject);
+            }
         }
         else
         {
             movementTrans += Vector2.left * background.speed * Time.deltaTime;
             transform.position = movementTrans;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "Player")
-        {
-            move = true;
         }
     }
 }

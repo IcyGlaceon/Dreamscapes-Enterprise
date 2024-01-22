@@ -14,26 +14,25 @@ public class DialogSystem : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip[] voiceLines;
-    [Header("Stoping")]
-    [SerializeField] GameObject stopPlayer;
     [Header("Collectables")]
     [SerializeField] TMP_Text collectText;
 
-    private string[] eraVoiceLine1 = { "Not many make it through the mirror maze. Still, I do not know your intentions.", "Many have tried hunting me to gain the power of wishing. None have succeeded.", "I am warning you: those with damaging dreams may not proceed further." };
-    private string[] eraVoiceLine2 = { "What is a damaging dream? The ones that take instead of give.", "The dreams that crush dreams.", "You've seen the result. The dwindling.", "A dream cannot sustain itself on the destruction of other dreams for long. It turns into an emptiness that spreads and consumes." };
+    private string[] eraVoiceLine1 = { "What is a damaging dream? The ones that take instead of give.", "The dreams that crush dreams.", "You've seen the result. The dwindling.", "A dream cannot sustain itself on the destruction of other dreams for long. It turns into an emptiness that spreads and consumes." };
+    private string[] eraVoiceLine2 = { "Not many make it through the mirror maze. Still, I do not know your intentions.", "Many have tried hunting me to gain the power of wishing. None have succeeded.", "I am warning you: those with damaging dreams may not proceed further." };
     private string[] eraVoiceLine3 = { "If your intentions are pure,", "then I will tell you about wish magic. The power to make dreams reality.", "Perhaps, enough constructive dreaming will repair Dreamscapes and Happyton.", "I have prepared a trial for you. Another labyrinth.", "Not a test of your resolve, but a test of your dreams." };
     private string[] eraVoiceLineBeginning = { "I am not as trusting as Magus." };
-    private int[] eraFaces1 = { 1, 1, 0 };
-    private int[] eraFaces2 = { 1, 1, 1, 1 };
+    private int[] eraFaces1 = { 1, 1, 1, 1 };
+    private int[] eraFaces2 = { 1, 1, 0 };
     private int[] eraFaces3 = { 1, 3, 3, 0, 0 };
 
     private int currentLevel;
 
     void Start()
     {
+        currentLevel = -1;
         voiceLineText.text = "";
         characterPicture.SetActive(false);
-        //StartCoroutine(ShowDialog(eraVoiceLine1, eraFaces1, voiceLines[0]));
+        StartCoroutine(ShowDialog(eraVoiceLineBeginning, eraFaces1, voiceLines[3]));
     }
 
     void Update()
@@ -60,7 +59,7 @@ public class DialogSystem : MonoBehaviour
             voiceLineText.text = "";
         }
         characterPicture.SetActive(false);
-        SceneManager.LoadSceneAsync("Level" +  currentLevel);
+        if(currentLevel!=0) SceneManager.LoadSceneAsync("Level" +  currentLevel);
     }
 
     public void showLevelDialog(int level)
