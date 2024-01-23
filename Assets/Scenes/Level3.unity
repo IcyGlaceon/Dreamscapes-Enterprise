@@ -1819,8 +1819,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 922448177768991941, guid: 0e0e09915c0342a4ea4dd1cc257b4562, type: 3}
       propertyPath: wait
-      value: 18
+      value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 922448177768991941, guid: 0e0e09915c0342a4ea4dd1cc257b4562, type: 3}
+      propertyPath: restart
+      value: 
+      objectReference: {fileID: 1009798412}
     - target: {fileID: 922448177768991941, guid: 0e0e09915c0342a4ea4dd1cc257b4562, type: 3}
       propertyPath: background
       value: 
@@ -13195,6 +13199,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1752424524}
     - target: {fileID: 7364257441230445999, guid: 9e19a925003cf34478d1a590f664c0c7, type: 3}
+      propertyPath: eraMovement
+      value: 
+      objectReference: {fileID: 1849400026}
+    - target: {fileID: 7364257441230445999, guid: 9e19a925003cf34478d1a590f664c0c7, type: 3}
       propertyPath: levelNumber
       value: 3
       objectReference: {fileID: 0}
@@ -13351,6 +13359,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5100417940789513509, guid: 6296d63aece6bfb429f30e792b1a35e5, type: 3}
   m_PrefabInstance: {fileID: 2058892431}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1849400026 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 922448177768991941, guid: 0e0e09915c0342a4ea4dd1cc257b4562, type: 3}
+  m_PrefabInstance: {fileID: 991624990}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ba6fb8ad993d244938a56ea2ff9f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1858281696
 GameObject:
   m_ObjectHideFlags: 0

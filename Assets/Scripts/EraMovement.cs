@@ -31,6 +31,8 @@ public class EraMovement : MonoBehaviour
                 nextSceneTime -= Time.deltaTime;
                 if (nextSceneTime < 0)
                 {
+                    Debug.Log(GameManager.currentLevel);
+                    if (GameManager.currentLevel == 4) SceneManager.LoadSceneAsync("StartScreen");
                     if (GameManager.currentLevel != 0 && GameManager.currentLevel != 1) SceneManager.LoadSceneAsync("Level" + GameManager.currentLevel); ;
                     Destroy(gameObject);
                 }
