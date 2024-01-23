@@ -56,7 +56,6 @@ public class DialogSystem : MonoBehaviour
             voiceLineText.text = "";
         }
         characterPicture.SetActive(false);
-        
     }
 
     public void showLevelDialog(int level)
