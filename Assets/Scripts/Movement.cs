@@ -24,7 +24,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.position.x - storedPosition < -0.3 || player.position.x - storedPosition > 0.3)
+        Debug.Log(player.position.x - storedPosition);
+        if (player.position.x - storedPosition < -0.4 || player.position.x - storedPosition > 0.4)
         {
             if (world != null)
             {
