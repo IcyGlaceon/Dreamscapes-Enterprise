@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
 
     bool isGrounded = false;
     float storedPosition = 0;
+    private float jumpTime = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -50,11 +51,11 @@ public class Movement : MonoBehaviour
             {
                 isGrounded = true;
             }
-            else 
-            {
-			    isGrounded = false;
-		    }
         }
+        else 
+        {
+			isGrounded = false;
+		}
 
         anim.SetBool("IsBlue", GameManager.blueCharacter);
         anim.SetBool("IsGreen", GameManager.greenCharacter);

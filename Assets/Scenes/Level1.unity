@@ -4013,7 +4013,7 @@ GameObject:
   - component: {fileID: 1392770404}
   - component: {fileID: 1392770403}
   - component: {fileID: 1392770402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -14824,7 +14824,7 @@ GameObject:
   - component: {fileID: 1752424526}
   - component: {fileID: 1752424525}
   - component: {fileID: 1752424524}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemaps
   m_TagString: Untagged
   m_Icon: {fileID: 0}

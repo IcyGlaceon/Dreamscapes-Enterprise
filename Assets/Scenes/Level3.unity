@@ -1334,7 +1334,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2742fcf0558bd114a853e39288f2ef15, type: 3}
   - {fileID: 8300000, guid: 5874c053a3bce4f4982f1174e69ab4e4, type: 3}
   - {fileID: 8300000, guid: c236cc9cb239efc4e984ca5fc5ddc993, type: 3}
-  stopPlayer: {fileID: 1359329348}
   collectText: {fileID: 1381717701}
 --- !u!4 &480544671
 Transform:
@@ -2387,11 +2386,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287554979}
   m_CullTransparentMesh: 1
---- !u!1 &1359329348 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3324318101964883548, guid: 9e19a925003cf34478d1a590f664c0c7, type: 3}
-  m_PrefabInstance: {fileID: 1757947741}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1381717699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2541,7 +2535,7 @@ GameObject:
   - component: {fileID: 1392770404}
   - component: {fileID: 1392770403}
   - component: {fileID: 1392770402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
