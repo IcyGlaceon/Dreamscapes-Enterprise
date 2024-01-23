@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public static bool yellowCharacter = false;
     public static bool cyanCharacter = false;
     public static int GainedCollectables = 0;
-    public static int MaxCollectibles = 15;
+    public static int MaxCollectibles = 9;
     public static int currentLevel = 0;
 
     private void Awake()
