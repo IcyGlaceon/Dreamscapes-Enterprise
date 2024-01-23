@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
 
     bool isGrounded = false;
     float storedPosition = 0;
+    private float jumpTime = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,10 +35,6 @@ public class Movement : MonoBehaviour
         }
         player.velocity = new Vector2(0, player.velocity.y);
 
-        if (player.velocity.y < 0)
-        {
-            isGrounded = false;
-        }
         if(player.velocity.y <= -1)
         {
             anim.SetBool("IsRunning", false);
@@ -45,6 +42,20 @@ public class Movement : MonoBehaviour
         }
         // Debug.Log(player.velocity.y);
 
+
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, LayerMask.GetMask("Ground"));
+        if (hit.collider != null)
+        { 
+		    if (hit.collider.gameObject.tag == "Ground")
+            {
+                isGrounded = true;
+            }
+        }
+        else 
+        {
+			isGrounded = false;
+		}
 
         anim.SetBool("IsBlue", GameManager.blueCharacter);
         anim.SetBool("IsGreen", GameManager.greenCharacter);
@@ -62,16 +73,6 @@ public class Movement : MonoBehaviour
             anim.SetBool("IsRunning", false);
             player.velocity = (Vector2.up * 8);
             isGrounded = false;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Ground")
-        {
-            anim.SetBool("IsRunning", true);
-            isGrounded = true;
-            anim.SetBool("IsFalling", false);
         }
     }
 }
