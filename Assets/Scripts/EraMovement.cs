@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EraMovement : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] BackgroundMovement background;
     [SerializeField] float wait = 15;
+    [SerializeField] float nextSceneTime = 3;
 
     Vector2 movementTrans;
     [HideInInspector] public bool move = false;
-    float dieTime = 3;
 
     void Start()
     {
@@ -27,8 +28,12 @@ public class EraMovement : MonoBehaviour
                 movementTrans += Vector2.right * speed * Time.deltaTime;
                 background.maxSpeed = 3;
                 transform.position = movementTrans;
-                dieTime -= Time.deltaTime;
-                if (dieTime < 0) Destroy(gameObject);
+                nextSceneTime -= Time.deltaTime;
+                if (nextSceneTime < 0)
+                {
+                    if (GameManager.currentLevel != 0 && GameManager.currentLevel != 1) SceneManager.LoadSceneAsync("Level" + GameManager.currentLevel); ;
+                    Destroy(gameObject);
+                }
             }
         }
         else
