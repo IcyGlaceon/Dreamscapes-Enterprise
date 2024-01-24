@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     [SerializeField] BackgroundMovement world;
     [SerializeField] Animator anim;
     [SerializeField] CharacterSelection selection;
+    [SerializeField] AutomaticRestart restart;
 
     bool isGrounded = false;
     float storedPosition = 0;
@@ -38,25 +39,8 @@ public class Movement : MonoBehaviour
         }
         player.velocity = new Vector2(0, player.velocity.y);
 
-        RaycastHit2D platformHit = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, LayerMask.GetMask("Platform"));
 
-        if (platformHit.collider != null)
-        {
-            if (platformHit.collider.tag == "Platform")
-            {
-
-                onGround();
-            }
-        }
-        else
-        {
-            if (player.velocity.y <= -1)
-            {
-                isFalling();
-            }
-        }
-
-        RaycastHit2D groundHit = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, LayerMask.GetMask("Ground"));
+        RaycastHit2D groundHit = Physics2D.Raycast(transform.position, Vector2.down, 1f, LayerMask.GetMask("Ground"));
         if (groundHit.collider != null)
         {
 		    if (groundHit.collider.gameObject.tag == "Ground")
@@ -71,6 +55,7 @@ public class Movement : MonoBehaviour
                 isFalling();
             }
         }
+        Debug.Log(anim.GetBool("IsRunning"));
 
         anim.SetBool("IsBlue", GameManager.blueCharacter);
         anim.SetBool("IsGreen", GameManager.greenCharacter);
