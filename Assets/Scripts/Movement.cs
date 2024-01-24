@@ -14,11 +14,13 @@ public class Movement : MonoBehaviour
     float storedPosition = 0;
     private float jumpTime = 0;
 
+    [SerializeField] Transform ground;
+
     // Start is called before the first frame update
     void Start()
     {
         storedPosition = player.position.x;
-        //anim.SetBool("IsBlue", true);
+        anim.SetBool("IsBlue", true);
     }
 
     // Update is called once per frame
@@ -36,30 +38,31 @@ public class Movement : MonoBehaviour
         }
         player.velocity = new Vector2(0, player.velocity.y);
 
-        if(player.velocity.y <= -1)
+        RaycastHit2D hit = Physics2D.Raycast(ground.position, -Vector2.up);
+        if(hit.collider.tag == "Platform")
         {
-            anim.SetBool("IsRunning", false);
-            anim.SetBool("IsFalling", true);
+            onGround();
         }
-        // Debug.Log(player.velocity.y);
 
 
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, LayerMask.GetMask("Ground"));
-        if (hit.collider != null)
-        { 
-		    if (hit.collider.gameObject.tag == "Ground")
+        RaycastHit2D groundHit = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, LayerMask.GetMask("Ground"));
+        if (groundHit.collider != null)
+        {
+		    if (groundHit.collider.gameObject.tag == "Ground")
             {
-                isGrounded = true;
-				player.position = new Vector2(storedPosition, player.position.y);
-			}
+                onGround();
+            }
         }
         else 
         {
-			isGrounded = false;
-		}
+            if (player.velocity.y <= -1)
+            {
+                isFalling();
+            }
+            //isFalling();
+        }
 
-        anim.SetBool("IsBlue", GameManager.blueCharacter);
+        //anim.SetBool("IsBlue", GameManager.blueCharacter);
         anim.SetBool("IsGreen", GameManager.greenCharacter);
         anim.SetBool("IsCyan", GameManager.cyanCharacter);
         anim.SetBool("IsRed", GameManager.redCharacter);
@@ -76,5 +79,19 @@ public class Movement : MonoBehaviour
             player.velocity = (Vector2.up * 8);
             isGrounded = false;
         }
+    }
+
+    public void onGround()
+    {
+        isGrounded = true;
+        anim.SetBool("IsRunning", true);
+        anim.SetBool("IsFalling", false);
+    }
+
+    public void isFalling()
+    {
+        isGrounded = false;
+        anim.SetBool("IsRunning", false);
+        anim.SetBool("IsFalling", true);
     }
 }
