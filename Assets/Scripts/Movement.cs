@@ -28,8 +28,8 @@ public class Movement : MonoBehaviour
     {
         if (player.position.x - storedPosition < -0.4 || player.position.x - storedPosition > 0.4)
         {
-			//Debug.Log(player.position.x - storedPosition);
-			if (world != null)
+            //Debug.Log(player.position.x - storedPosition);
+            if (world != null)
             {
                 world.MoveBack();
                 isGrounded = false;
@@ -38,12 +38,23 @@ public class Movement : MonoBehaviour
         }
         player.velocity = new Vector2(0, player.velocity.y);
 
-        RaycastHit2D hit = Physics2D.Raycast(ground.position, -Vector2.up);
-        if(hit.collider.tag == "Platform")
-        {
-            onGround();
-        }
+        RaycastHit2D platformHit = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, LayerMask.GetMask("Platform"));
 
+        if (platformHit.collider != null)
+        {
+            if (platformHit.collider.tag == "Platform")
+            {
+
+                onGround();
+            }
+        }
+        else
+        {
+            if (player.velocity.y <= -1)
+            {
+                isFalling();
+            }
+        }
 
         RaycastHit2D groundHit = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, LayerMask.GetMask("Ground"));
         if (groundHit.collider != null)
@@ -59,7 +70,6 @@ public class Movement : MonoBehaviour
             {
                 isFalling();
             }
-            //isFalling();
         }
 
         //anim.SetBool("IsBlue", GameManager.blueCharacter);
