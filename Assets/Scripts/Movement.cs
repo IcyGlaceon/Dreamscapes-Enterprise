@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
 
     bool isGrounded = false;
     float storedPosition = 0;
+    private float jumpTime = 0;
 
     [SerializeField] Transform ground;
 
@@ -27,7 +28,8 @@ public class Movement : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(ground.position, -Vector2.up);
 
-        if (player.position.x - storedPosition < -0.3 || player.position.x - storedPosition > 0.3)
+        Debug.Log(player.position.x - storedPosition);
+        if (player.position.x - storedPosition < -0.4 || player.position.x - storedPosition > 0.4)
         {
             if (world != null)
             {
@@ -52,7 +54,21 @@ public class Movement : MonoBehaviour
             anim.SetBool("IsFalling", false);
         }
 
-        //anim.SetBool("IsBlue", GameManager.blueCharacter);
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, LayerMask.GetMask("Ground"));
+        if (hit.collider != null)
+        { 
+		    if (hit.collider.gameObject.tag == "Ground")
+            {
+                isGrounded = true;
+            }
+        }
+        else 
+        {
+			isGrounded = false;
+		}
+
+        anim.SetBool("IsBlue", GameManager.blueCharacter);
         anim.SetBool("IsGreen", GameManager.greenCharacter);
         anim.SetBool("IsCyan", GameManager.cyanCharacter);
         anim.SetBool("IsRed", GameManager.redCharacter);
@@ -68,16 +84,6 @@ public class Movement : MonoBehaviour
             anim.SetBool("IsRunning", false);
             player.velocity = (Vector2.up * 8);
             isGrounded = false;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Ground")
-        {
-            anim.SetBool("IsRunning", true);
-            isGrounded = true;
-            anim.SetBool("IsFalling", false);
         }
     }
 }

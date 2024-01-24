@@ -56,7 +56,6 @@ public class DialogSystem : MonoBehaviour
             voiceLineText.text = "";
         }
         characterPicture.SetActive(false);
-        if(GameManager.currentLevel !=0 && GameManager.currentLevel != 1) SceneManager.LoadSceneAsync("Level" + GameManager.currentLevel);
     }
 
     public void showLevelDialog(int level)
