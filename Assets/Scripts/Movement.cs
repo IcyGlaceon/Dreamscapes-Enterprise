@@ -42,16 +42,12 @@ public class Movement : MonoBehaviour
 
         if(player.velocity.y <= -1)
         {
-            isGrounded = false;
-            anim.SetBool("IsRunning", false);
-            anim.SetBool("IsFalling", true);
+            isFalling();
         }
 
         if(hit.collider.tag == "Platform")
         {
-            anim.SetBool("IsRunning", true);
-            isGrounded = true;
-            anim.SetBool("IsFalling", false);
+            onGround();
         }
 
 
@@ -60,16 +56,12 @@ public class Movement : MonoBehaviour
         {
 		    if (groundHit.collider.gameObject.tag == "Ground")
             {
-                isGrounded = true;
-                anim.SetBool("IsRunning", true);
-                anim.SetBool("IsFalling", false);
+                onGround();
             }
         }
         else 
         {
-			isGrounded = false;
-            anim.SetBool("IsRunning", false);
-            anim.SetBool("IsFalling", true);
+            isFalling();
         }
 
         //anim.SetBool("IsBlue", GameManager.blueCharacter);
@@ -89,5 +81,19 @@ public class Movement : MonoBehaviour
             player.velocity = (Vector2.up * 8);
             isGrounded = false;
         }
+    }
+
+    public void onGround()
+    {
+        isGrounded = true;
+        anim.SetBool("IsRunning", true);
+        anim.SetBool("IsFalling", false);
+    }
+
+    public void isFalling()
+    {
+        isGrounded = false;
+        anim.SetBool("IsRunning", false);
+        anim.SetBool("IsFalling", true);
     }
 }
