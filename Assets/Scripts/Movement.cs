@@ -9,7 +9,6 @@ public class Movement : MonoBehaviour
     [SerializeField] BackgroundMovement world;
     [SerializeField] Animator anim;
     [SerializeField] CharacterSelection selection;
-    [SerializeField] AutomaticRestart restart;
 
     bool isGrounded = false;
     float storedPosition = 0;
@@ -79,12 +78,6 @@ public class Movement : MonoBehaviour
         anim.SetBool("IsRed", GameManager.redCharacter);
         anim.SetBool("IsPink", GameManager.pinkCharacter);
         anim.SetBool("IsYellow", GameManager.yellowCharacter);
-
-        if(Input.GetMouseButtonDown(0))
-        {
-            Jump();
-            restart.Reset();
-        }
     }
 
     public void Jump()
