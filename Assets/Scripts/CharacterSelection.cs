@@ -46,6 +46,12 @@ public class CharacterSelection : MonoBehaviour
     public void Start()
     {
         GameManager.GainedCollectables = 0;
+        GameManager.blueCharacter = false;
+        GameManager.cyanCharacter = false;
+        GameManager.yellowCharacter = false;
+        GameManager.redCharacter = false;
+        GameManager.pinkCharacter = false;
+        GameManager.greenCharacter = false;
     }
 
 }
