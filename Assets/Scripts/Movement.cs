@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         storedPosition = player.position.x;
-        anim.SetBool("IsBlue", true);
+        //anim.SetBool("IsBlue", true);
     }
 
     // Update is called once per frame
@@ -72,7 +72,7 @@ public class Movement : MonoBehaviour
             }
         }
 
-        //anim.SetBool("IsBlue", GameManager.blueCharacter);
+        anim.SetBool("IsBlue", GameManager.blueCharacter);
         anim.SetBool("IsGreen", GameManager.greenCharacter);
         anim.SetBool("IsCyan", GameManager.cyanCharacter);
         anim.SetBool("IsRed", GameManager.redCharacter);
