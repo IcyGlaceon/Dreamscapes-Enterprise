@@ -24,10 +24,10 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(player.position.x - storedPosition);
         if (player.position.x - storedPosition < -0.4 || player.position.x - storedPosition > 0.4)
         {
-            if (world != null)
+			//Debug.Log(player.position.x - storedPosition);
+			if (world != null)
             {
                 world.MoveBack();
                 isGrounded = false;
@@ -51,7 +51,8 @@ public class Movement : MonoBehaviour
 		    if (hit.collider.gameObject.tag == "Ground")
             {
                 isGrounded = true;
-            }
+				player.position = new Vector2(storedPosition, player.position.y);
+			}
         }
         else 
         {
