@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     [SerializeField] BackgroundMovement world;
     [SerializeField] Animator anim;
     [SerializeField] CharacterSelection selection;
+    [SerializeField] AutomaticRestart restart;
 
     bool isGrounded = false;
     float storedPosition = 0;
@@ -82,6 +83,7 @@ public class Movement : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             Jump();
+            restart.Reset();
         }
     }
 
