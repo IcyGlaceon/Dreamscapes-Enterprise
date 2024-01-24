@@ -2171,17 +2171,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744439637}
   m_CullTransparentMesh: 1
---- !u!114 &820457912 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2411825620012278756, guid: 8bbfd8c873c1a064bb05244b27a2d47d, type: 3}
-  m_PrefabInstance: {fileID: 2128182098}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088389170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bfab0934700ddc438992b9c5c620a83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &991624990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16464,18 +16453,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 820457912}
-        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
-        m_MethodName: Jump
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1009798412}
         m_TargetAssemblyTypeName: AutomaticRestart, Assembly-CSharp
         m_MethodName: Reset
