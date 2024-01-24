@@ -55,20 +55,24 @@ public class Movement : MonoBehaviour
         }
 
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, LayerMask.GetMask("Ground"));
-        if (hit.collider != null)
-        { 
-		    if (hit.collider.gameObject.tag == "Ground")
+        RaycastHit2D groundHit = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, LayerMask.GetMask("Ground"));
+        if (groundHit.collider != null)
+        {
+		    if (groundHit.collider.gameObject.tag == "Ground")
             {
                 isGrounded = true;
+                anim.SetBool("IsRunning", true);
+                anim.SetBool("IsFalling", false);
             }
         }
         else 
         {
 			isGrounded = false;
-		}
+            anim.SetBool("IsRunning", false);
+            anim.SetBool("IsFalling", true);
+        }
 
-        anim.SetBool("IsBlue", GameManager.blueCharacter);
+        //anim.SetBool("IsBlue", GameManager.blueCharacter);
         anim.SetBool("IsGreen", GameManager.greenCharacter);
         anim.SetBool("IsCyan", GameManager.cyanCharacter);
         anim.SetBool("IsRed", GameManager.redCharacter);
