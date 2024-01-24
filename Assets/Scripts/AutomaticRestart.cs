@@ -27,7 +27,19 @@ public class AutomaticRestart : MonoBehaviour
         { 
             Application.Quit();
         }
-    }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SceneManager.LoadScene("Level1");
+        }
+		if (Input.GetKeyDown(KeyCode.Alpha2))
+		{
+			SceneManager.LoadScene("Level2");
+		}
+		if (Input.GetKeyDown(KeyCode.Alpha3))
+		{
+			SceneManager.LoadScene("Level3");
+		}
+	}
 
 	public void Reset()
 	{
