@@ -40,10 +40,7 @@ public class Movement : MonoBehaviour
         }
         player.velocity = new Vector2(0, player.velocity.y);
 
-        if(player.velocity.y <= -1)
-        {
-            isFalling();
-        }
+        
 
         if(hit.collider.tag == "Platform")
         {
@@ -61,7 +58,11 @@ public class Movement : MonoBehaviour
         }
         else 
         {
-            isFalling();
+            if (player.velocity.y <= -1)
+            {
+                isFalling();
+            }
+            //isFalling();
         }
 
         //anim.SetBool("IsBlue", GameManager.blueCharacter);

@@ -14358,7 +14358,6 @@ GameObject:
   - component: {fileID: 1511380315}
   - component: {fileID: 1511380314}
   - component: {fileID: 1511380313}
-  - component: {fileID: 1511380312}
   m_Layer: 5
   m_Name: JumpButtonCanvas
   m_TagString: Untagged
@@ -14366,22 +14365,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1511380312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511380311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bfab0934700ddc438992b9c5c620a83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 3966609214462012227, guid: 8bbfd8c873c1a064bb05244b27a2d47d, type: 3}
-  world: {fileID: 0}
-  anim: {fileID: 0}
-  selection: {fileID: 0}
 --- !u!114 &1511380313
 MonoBehaviour:
   m_ObjectHideFlags: 0
