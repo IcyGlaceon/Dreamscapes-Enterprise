@@ -78,6 +78,17 @@ public class Movement : MonoBehaviour
         anim.SetBool("IsRed", GameManager.redCharacter);
         anim.SetBool("IsPink", GameManager.pinkCharacter);
         anim.SetBool("IsYellow", GameManager.yellowCharacter);
+
+        if(Input.GetMouseButtonDown(0) && !restart.RestartUiUp)
+        {
+            Jump();
+            restart.Reset();
+        }
+
+        if(restart.RestartUiUp)
+        {
+            world.speed = 0;
+        }
     }
 
     public void Jump()

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class AutomaticRestart : MonoBehaviour
 {
     float Timer = 60;
-    bool RestartUiUp = false;
+    public bool RestartUiUp = false;
     [SerializeField] GameObject RestartUI;
 
     void Update()
