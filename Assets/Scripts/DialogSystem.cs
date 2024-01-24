@@ -21,6 +21,8 @@ public class DialogSystem : MonoBehaviour
     private string[] eraVoiceLine2 = { "Not many make it through the mirror maze. Still, I do not know your intentions.", "Many have tried hunting me to gain the power of wishing. None have succeeded.", "I am warning you: those with damaging dreams may not proceed further." };
     private string[] eraVoiceLine3 = { "If your intentions are pure,", "then I will tell you about wish magic. The power to make dreams reality.", "Perhaps, enough constructive dreaming will repair Dreamscapes and Happyton.", "I have prepared a trial for you. Another labyrinth.", "Not a test of your resolve, but a test of your dreams." };
     private string[] eraVoiceLineBeginning = { "I am not as trusting as Magus." };
+    private string[] polySomeDreams = { "Thank you for collecting some of the lost dreams!" };
+    private string[] polyAllDreams = { "Thank you for collecting all of the lost dreams!" };
     private int[] eraFaces1 = { 1, 1, 1, 1 };
     private int[] eraFaces2 = { 1, 1, 0 };
     private int[] eraFaces3 = { 1, 3, 3, 0, 0 };
@@ -29,7 +31,6 @@ public class DialogSystem : MonoBehaviour
     {
         voiceLineText.text = "";
         characterPicture.SetActive(false);
-        //if(GameManager.currentLevel == 0) StartCoroutine(ShowDialog(eraVoiceLineBeginning, eraFaces1, voiceLines[3]));
     }
 
     void Update()
@@ -74,6 +75,11 @@ public class DialogSystem : MonoBehaviour
                 break;
             case 3:
                 StartCoroutine(ShowDialog(eraVoiceLine3, eraFaces3, voiceLines[2]));
+                break;
+            case 8:
+                int[] polyFaces = { 4 };
+                if (GameManager.GainedCollectables < 9) StartCoroutine(ShowDialog(polySomeDreams, polyFaces));
+                else StartCoroutine(ShowDialog(polyAllDreams, polyFaces));
                 break;
         }
     }
