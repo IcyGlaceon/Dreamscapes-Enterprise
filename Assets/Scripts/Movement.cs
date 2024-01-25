@@ -79,7 +79,7 @@ public class Movement : MonoBehaviour
 
     public void Jump()
     {
-        if (isGrounded)
+        if (isGrounded && player.velocity.y == 0)
         {
             anim.SetTrigger("Jump");
             anim.SetBool("IsRunning", false);
