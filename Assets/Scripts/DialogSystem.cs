@@ -35,7 +35,7 @@ public class DialogSystem : MonoBehaviour
 
     void Update()
     {
-        collectText.text = GameManager.GainedCollectables.ToString();
+        collectText.text = GameManager.GainedCollectables.ToString() + "/9";
     }
 
     public IEnumerator ShowDialog(string[] dialog, int[] faceNumbers = null, AudioClip voiceLine = null)

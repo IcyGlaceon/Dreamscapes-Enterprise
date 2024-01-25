@@ -16,11 +16,13 @@ public class EraMovement : MonoBehaviour
     Vector2 movementTrans;
     [HideInInspector] public bool move = false;
     Color color = Color.black;
+    SpriteRenderer spriteRenderer;
 
     void Start()
     {
         movementTrans = transform.position;
         color.a = 0;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -38,6 +40,7 @@ public class EraMovement : MonoBehaviour
                     blackScreen.color = color;
                     Debug.Log(blackScreen.color.a);
                 }
+                spriteRenderer.flipX = true;
                 movementTrans += Vector2.right * speed * Time.deltaTime;
                 background.maxSpeed = 3;
                 transform.position = movementTrans;
