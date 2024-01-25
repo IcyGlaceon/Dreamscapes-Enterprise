@@ -12,7 +12,8 @@ public class BackgroundMovement : MonoBehaviour
     public float slowSpeed;
     public float maxSpeed;
     public bool bouncedBack = false;
-    Vector2 movementTrans;
+	public float bounceTime = 0;
+	Vector2 movementTrans;
 
     void Start()
     {
@@ -44,12 +45,12 @@ public class BackgroundMovement : MonoBehaviour
         {
             speed = maxSpeed;
         }
-
+        bounceTime -= Time.deltaTime;
     }
 
     public void MoveBack()
     {
-        if(speed == maxSpeed) 
+        if(speed == maxSpeed && bounceTime <= 0) 
         {
             bouncedBack = true;
             Debug.Log("bounced: " + bouncedBack);
