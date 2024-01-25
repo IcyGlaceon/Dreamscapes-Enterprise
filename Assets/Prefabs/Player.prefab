@@ -33,7 +33,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: [{fileID: 3392297697367713089}]
+  m_Children:
+  - {fileID: 3392297697367713089}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &103997669292191047
@@ -165,8 +166,8 @@ MonoBehaviour:
   player: {fileID: 3966609214462012227}
   world: {fileID: 0}
   anim: {fileID: 3643179731126522443}
-  selection: {fileID: 8094118622127262790, guid: 5e8b13727c3444246a2a12b74794ef8f,
-    type: 3}
+  selection: {fileID: 8094118622127262790, guid: 5e8b13727c3444246a2a12b74794ef8f, type: 3}
+  restart: {fileID: 0}
   ground: {fileID: 3392297697367713089}
 --- !u!95 &3643179731126522443
 Animator:
@@ -181,7 +182,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: e4d051fb9862b0e47b5faa3bbd2d1ab7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 

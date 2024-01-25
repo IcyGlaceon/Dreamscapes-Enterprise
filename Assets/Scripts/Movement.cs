@@ -55,7 +55,8 @@ public class Movement : MonoBehaviour
                 isFalling();
             }
         }
-        Debug.Log(anim.GetBool("IsRunning"));
+        Debug.Log(anim.GetCurrentAnimatorClipInfo(0)[0].clip.name);
+        
 
         anim.SetBool("IsBlue", GameManager.blueCharacter);
         anim.SetBool("IsGreen", GameManager.greenCharacter);
