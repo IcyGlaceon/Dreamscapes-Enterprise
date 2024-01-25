@@ -2743,6 +2743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4e9c2b859bb6346a8d54e2311cdbb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RestartUiUp: 0
   RestartUI: {fileID: 1486800363}
 --- !u!4 &1009798414
 Transform:
@@ -16340,6 +16341,12 @@ PrefabInstance:
       propertyPath: nextSceneTime
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6510042319770273773, guid: 0e0e09915c0342a4ea4dd1cc257b4562,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 51b70f438c62fca4d8bbff57110ea19a,
+        type: 3}
     - target: {fileID: 6817379448279550668, guid: 0e0e09915c0342a4ea4dd1cc257b4562,
         type: 3}
       propertyPath: m_Name
@@ -16348,17 +16355,17 @@ PrefabInstance:
     - target: {fileID: 8298972864472545915, guid: 0e0e09915c0342a4ea4dd1cc257b4562,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8298972864472545915, guid: 0e0e09915c0342a4ea4dd1cc257b4562,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8298972864472545915, guid: 0e0e09915c0342a4ea4dd1cc257b4562,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8298972864472545915, guid: 0e0e09915c0342a4ea4dd1cc257b4562,
         type: 3}
@@ -16368,7 +16375,7 @@ PrefabInstance:
     - target: {fileID: 8298972864472545915, guid: 0e0e09915c0342a4ea4dd1cc257b4562,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.34
+      value: 6.7
       objectReference: {fileID: 0}
     - target: {fileID: 8298972864472545915, guid: 0e0e09915c0342a4ea4dd1cc257b4562,
         type: 3}
