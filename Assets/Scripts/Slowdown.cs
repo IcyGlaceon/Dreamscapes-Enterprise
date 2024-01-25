@@ -24,6 +24,7 @@ public class Slowdown : MonoBehaviour
 		{
 			Movement.speed = originalSpeed;
 			Movement.slow = false;
+			Movement.bounceTime = 0.2f;
 		}
 	}
 }
