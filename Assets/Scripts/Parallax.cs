@@ -50,10 +50,27 @@ public class Parallax : MonoBehaviour
         Scroll();
         CheckReset();
 
+		var objects = FindObjectsByType<BackgroundMovement>(FindObjectsSortMode.InstanceID);
+		foreach (var thing in objects)
+		{
+			string destination = Application.persistentDataPath + "/" + gameObject.name + ".log";
+			FileStream file;
+
+			if (File.Exists(destination)) file = File.OpenWrite(destination);
+			else file = File.Create(destination);
+			string data_to_store = JsonUtility.ToJson(new GAData(BGMovement.bouncedBack, thing.bouncedBack), true);
+			using (StreamWriter writer = new StreamWriter(file))
+			{
+				writer.Write(data_to_store);
+			}
+			file.Close();
+		}
+
 		if (BGMovement.slow == false)
         {
             if (BGMovement.bouncedBack == true)
             {
+                //Application.Quit();
                 moveSpeed = backwardsSpeed;
 			}
             else
@@ -90,8 +107,9 @@ public class GAData
     public bool bounced;
     public bool findBounce;
 
-    public GAData(bool bounced) 
+    public GAData(bool bounced, bool findBounce) 
     { 
         this.bounced = bounced;
+        this.findBounce = findBounce;
     }
 }
