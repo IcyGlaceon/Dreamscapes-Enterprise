@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -12,7 +13,7 @@ public class Movement : MonoBehaviour
     [SerializeField] AutomaticRestart restart;
 
     bool isGrounded = false;
-    float storedPosition = 0;
+    public float storedPosition = 0;
     private float jumpTime = 0;
 
     [SerializeField] Transform ground;
@@ -29,8 +30,7 @@ public class Movement : MonoBehaviour
     {
         if (player.position.x - storedPosition < -0.4 || player.position.x - storedPosition > 0.4)
         {
-            //Debug.Log(player.position.x - storedPosition);
-            if (world != null)
+			if (world != null)
             {
                 world.MoveBack();
                 isGrounded = false;
