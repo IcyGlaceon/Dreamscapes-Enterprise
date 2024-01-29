@@ -56,7 +56,7 @@ public class BackgroundMovement : MonoBehaviour
         }
         bounceTime -= Time.deltaTime;
 
-        if (prevSpeed > speed && speed > -3.5 && speed != slowSpeed) 
+        if (prevSpeed > speed && speed > -3.5 && speed != slowSpeed && speed != 0) 
         {
             speed = prevSpeed;
         }
