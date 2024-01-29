@@ -14,7 +14,7 @@ public class Parallax : MonoBehaviour
     float singleTextureWidth;
     float originalSpeed;
     float slowSpeed;
-    public float backwardsSpeed;
+    float backwardsSpeed;
 
     void Start()
     {
