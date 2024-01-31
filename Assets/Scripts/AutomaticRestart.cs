@@ -42,10 +42,14 @@ public class AutomaticRestart : MonoBehaviour
 		}
 	}
 
+    public void ResetSpeed()
+    {
+        background.maxSpeed = 3;
+    }
+
 	public void Reset()
 	{
         Timer = 60;
-        background.maxSpeed = 3;
         RestartUI.SetActive(false);
         RestartUiUp = false;
 	}

@@ -35,10 +35,8 @@ public class EraMovement : MonoBehaviour
                 if (blackScreen)
                 {
                     blackScreen.gameObject.SetActive(true);
-                    Debug.Log(blackScreen.gameObject.activeInHierarchy);
                     color.a += fadeSpeed * Time.deltaTime;
                     blackScreen.color = color;
-                    Debug.Log(blackScreen.color.a);
                 }
                 spriteRenderer.flipX = true;
                 movementTrans += Vector2.right * speed * Time.deltaTime;
@@ -59,7 +57,6 @@ public class EraMovement : MonoBehaviour
         }
         else
         {
-            Debug.Log(background.speed);
             movementTrans += Vector2.left * background.speed * Time.deltaTime;
             transform.position = movementTrans;
         }
