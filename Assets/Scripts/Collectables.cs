@@ -13,6 +13,7 @@ public class Collectables : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            GameManager.collectSound.Play();
             GameManager.GainedCollectables++;
             if (collectionParticle)
             {

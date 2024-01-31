@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] CharacterSelection selection;
     [SerializeField] AutomaticRestart restart;
+    [SerializeField] AudioSource jumpSound;
 
     bool isGrounded = false;
     public float storedPosition = 0;
@@ -81,6 +82,7 @@ public class Movement : MonoBehaviour
     {
         if (isGrounded && player.velocity.y == 0)
         {
+            jumpSound.Play();
             anim.SetTrigger("Jump");
             anim.SetBool("IsRunning", false);
             player.velocity = (Vector2.up * 8);
