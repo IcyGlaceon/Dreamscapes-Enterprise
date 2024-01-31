@@ -74,7 +74,7 @@ public class Movement : MonoBehaviour
 
         if(restart.RestartUiUp)
         {
-            world.speed = 0;
+            world.maxSpeed = 0;
         }
     }
 

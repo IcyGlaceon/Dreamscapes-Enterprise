@@ -2759,6 +2759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RestartUiUp: 0
   RestartUI: {fileID: 1486800363}
+  background: {fileID: 1752424524}
 --- !u!4 &1009798414
 Transform:
   m_ObjectHideFlags: 0
