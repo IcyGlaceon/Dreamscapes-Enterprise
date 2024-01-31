@@ -2611,7 +2611,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 70, y: -50}
-  m_SizeDelta: {x: 340, y: 50}
+  m_SizeDelta: {x: 334, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &744439639
 MonoBehaviour:
@@ -3030,7 +3030,6 @@ MonoBehaviour:
   movement: {fileID: 820457912}
   BGMovement: {fileID: 1752424524}
   SlowdownAmount: 0.5
-  backwardsSpeed: 0
 --- !u!212 &1054705961
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3880,7 +3879,6 @@ MonoBehaviour:
   movement: {fileID: 820457912}
   BGMovement: {fileID: 1752424524}
   SlowdownAmount: 0.5
-  backwardsSpeed: 0
 --- !u!1 &1381717699
 GameObject:
   m_ObjectHideFlags: 0
@@ -3915,8 +3913,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 99.615135, y: 0.000015258789}
-  m_SizeDelta: {x: 60, y: 50}
+  m_AnchoredPosition: {x: 110, y: 0}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1381717701
 MonoBehaviour:
@@ -3938,7 +3936,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 15
+  m_text: 0 / 9
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2512104ac48a85a4281b7adc40ae6dea, type: 2}
   m_sharedMaterial: {fileID: -8175910561634801494, guid: 2512104ac48a85a4281b7adc40ae6dea, type: 2}
@@ -15423,7 +15421,6 @@ MonoBehaviour:
   movement: {fileID: 820457912}
   BGMovement: {fileID: 1752424524}
   SlowdownAmount: 0.5
-  backwardsSpeed: 0
 --- !u!212 &1622629973
 SpriteRenderer:
   m_ObjectHideFlags: 0
