@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -15,15 +16,18 @@ public class GameManager : MonoBehaviour
     public static int GainedCollectables = 0;
     public static int MaxCollectibles = 9;
     public static int currentLevel = 0;
+    public static AudioSource collectSound;
 
     private void Awake()
     {
+
         if (Instance != null)
         {
             Instance = this;
             Destroy(gameObject);
             return;
         }
+        collectSound = GetComponent<AudioSource>();
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
@@ -36,6 +40,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+        Debug.Log(collectSound);
     }
 }
