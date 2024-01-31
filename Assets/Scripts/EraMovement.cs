@@ -53,8 +53,13 @@ public class EraMovement : MonoBehaviour
                 }
             }
         }
+        else if(!move && background.speed == 0)
+        {
+            
+        }
         else
         {
+            Debug.Log(background.speed);
             movementTrans += Vector2.left * background.speed * Time.deltaTime;
             transform.position = movementTrans;
         }

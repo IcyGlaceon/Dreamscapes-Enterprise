@@ -9,6 +9,7 @@ public class AutomaticRestart : MonoBehaviour
     float Timer = 60;
     public bool RestartUiUp = false;
     [SerializeField] GameObject RestartUI;
+    [SerializeField] BackgroundMovement background;
 
     void Update()
     {
@@ -44,6 +45,7 @@ public class AutomaticRestart : MonoBehaviour
 	public void Reset()
 	{
         Timer = 60;
+        background.maxSpeed = 3;
         RestartUI.SetActive(false);
         RestartUiUp = false;
 	}
