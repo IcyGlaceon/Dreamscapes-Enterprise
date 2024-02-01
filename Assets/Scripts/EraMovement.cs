@@ -12,6 +12,7 @@ public class EraMovement : MonoBehaviour
     [SerializeField] float wait = 15;
     [SerializeField] float nextSceneTime = 3;
     [SerializeField] float fadeSpeed = 1;
+    [SerializeField] bool forward = false;
 
     Vector2 movementTrans;
     [HideInInspector] public bool move = false;
@@ -51,9 +52,12 @@ public class EraMovement : MonoBehaviour
                 }
             }
         }
-        else if(!move && background.speed == 0)
+        else if(forward)
         {
-            
+            movementTrans += Vector2.right * speed * Time.deltaTime;
+            transform.position = movementTrans;
+            nextSceneTime -= Time.deltaTime;
+            if(nextSceneTime < 0) Destroy(gameObject);
         }
         else
         {
