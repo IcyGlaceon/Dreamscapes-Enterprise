@@ -2947,6 +2947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Era
       objectReference: {fileID: 0}
+    - target: {fileID: 6817379448279550668, guid: 0e0e09915c0342a4ea4dd1cc257b4562, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8298972864472545915, guid: 0e0e09915c0342a4ea4dd1cc257b4562, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -16329,6 +16333,10 @@ PrefabInstance:
     - target: {fileID: 3324318101964883548, guid: 9e19a925003cf34478d1a590f664c0c7, type: 3}
       propertyPath: m_Name
       value: StopPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324318101964883548, guid: 9e19a925003cf34478d1a590f664c0c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4358634597941560980, guid: 9e19a925003cf34478d1a590f664c0c7, type: 3}
       propertyPath: m_LocalScale.x
