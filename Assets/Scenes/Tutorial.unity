@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -400}
+  m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 900, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1556510210
@@ -190,10 +190,13 @@ MonoBehaviour:
 
 
     Try to collect some lost dreams along
-    the way and return them to Poly.'
+    the way and return them to Poly.
+
+
+    (Touch to Continue)'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2512104ac48a85a4281b7adc40ae6dea, type: 2}
-  m_sharedMaterial: {fileID: -8175910561634801494, guid: 2512104ac48a85a4281b7adc40ae6dea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fef7dc084ab64b442b2a9068800a1ebf, type: 2}
+  m_sharedMaterial: {fileID: 1570404745636616043, guid: fef7dc084ab64b442b2a9068800a1ebf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -618,7 +621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd7f9502f9376e84d8da4858970e1134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
