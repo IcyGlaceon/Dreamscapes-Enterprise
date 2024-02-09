@@ -16,16 +16,21 @@ public class DialogSystem : MonoBehaviour
     [SerializeField] AudioClip[] voiceLines;
     [Header("Collectables")]
     [SerializeField] TMP_Text collectText;
+    [Header("Secret")]
+    [SerializeField] GameManager allDreamsParticle;
 
     private string[] eraVoiceLine1 = { "What is a damaging dream? The ones that take instead of give.", "The dreams that crush dreams.", "You've seen the result. The dwindling.", "A dream cannot sustain itself on the destruction of other dreams for long. It turns into an emptiness that spreads and consumes." };
     private string[] eraVoiceLine2 = { "Not many make it through the mirror maze. Still, I do not know your intentions.", "Many have tried hunting me to gain the power of wishing. None have succeeded.", "I am warning you: those with damaging dreams may not proceed further." };
     private string[] eraVoiceLine3 = { "If your intentions are pure,", "then I will tell you about wish magic. The power to make dreams reality.", "Perhaps, enough constructive dreaming will repair Dreamscapes and Happyton.", "I have prepared a trial for you. Another labyrinth.", "Not a test of your resolve, but a test of your dreams." };
     private string[] eraVoiceLineBeginning = { "I am not as trusting as Magus." };
+    private string[] eraVoiceLineSecret = { "If your intentions are...wait...", "When did you get a moustache?", "Oh I see! This is the secret ending to the game!", "Well, here is your reward!" };
+    private string[] polyNoDreams = { "Congratulations! You have no dreams!", "You get the moustache of power!" };
     private string[] polySomeDreams = { "Thank you for collecting some of the lost dreams!" };
     private string[] polyAllDreams = { "Thank you for collecting all of the lost dreams!" };
     private int[] eraFaces1 = { 1, 1, 1, 1 };
     private int[] eraFaces2 = { 1, 1, 0 };
     private int[] eraFaces3 = { 1, 3, 3, 0, 0 };
+    private int[] eraFacesSecret = { 1, 1, 2, 2 };
 
     void Start()
     {
@@ -74,12 +79,19 @@ public class DialogSystem : MonoBehaviour
                 StartCoroutine(ShowDialog(eraVoiceLine2, eraFaces2, voiceLines[1]));
                 break;
             case 3:
-                StartCoroutine(ShowDialog(eraVoiceLine3, eraFaces3, voiceLines[2]));
+                if (!GameManager.moustache) StartCoroutine(ShowDialog(eraVoiceLine3, eraFaces3, voiceLines[2]));
+                else StartCoroutine(ShowDialog(eraVoiceLineSecret, eraFacesSecret));
                 break;
             case 8:
-                int[] polyFaces = { 4 };
-                if (GameManager.GainedCollectables < 9) StartCoroutine(ShowDialog(polySomeDreams, polyFaces));
-                else StartCoroutine(ShowDialog(polyAllDreams, polyFaces));
+                int[] polyFaces = { 4, 4 };
+                if (GameManager.GainedCollectables == 0)
+                {
+                    StartCoroutine(ShowDialog(polyNoDreams, polyFaces));
+                    GameManager.moustache = true;
+                }
+                else if (GameManager.GainedCollectables == 9) StartCoroutine(ShowDialog(polyAllDreams, polyFaces));
+                else if (GameManager.GainedCollectables < 9) StartCoroutine(ShowDialog(polySomeDreams, polyFaces));
+
                 break;
         }
     }
