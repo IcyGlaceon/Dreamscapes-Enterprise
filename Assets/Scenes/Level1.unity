@@ -1536,6 +1536,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 51b70f438c62fca4d8bbff57110ea19a, type: 3}
+    - target: {fileID: 6510042319770273773, guid: 0e0e09915c0342a4ea4dd1cc257b4562, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6817379448279550668, guid: 0e0e09915c0342a4ea4dd1cc257b4562, type: 3}
       propertyPath: m_Name
       value: FirstEra
@@ -2000,6 +2004,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5874c053a3bce4f4982f1174e69ab4e4, type: 3}
   - {fileID: 8300000, guid: c236cc9cb239efc4e984ca5fc5ddc993, type: 3}
   collectText: {fileID: 1381717701}
+  allDreamsParticle: {fileID: 0}
+  playerMustache: {fileID: 0}
 --- !u!4 &480544671
 Transform:
   m_ObjectHideFlags: 0
