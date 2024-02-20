@@ -7734,6 +7734,10 @@ PrefabInstance:
       propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6510042319770273773, guid: 0e0e09915c0342a4ea4dd1cc257b4562, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6817379448279550668, guid: 0e0e09915c0342a4ea4dd1cc257b4562, type: 3}
       propertyPath: m_Name
       value: BeginningEra
