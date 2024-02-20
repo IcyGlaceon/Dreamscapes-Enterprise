@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public static bool redCharacter = false;
     public static bool yellowCharacter = false;
     public static bool cyanCharacter = false;
-    public static int GainedCollectables = 9;
+    public static int GainedCollectables = 0;
     public static int MaxCollectibles = 0;
     public static int currentLevel = 0;
     public static AudioSource collectSound;
