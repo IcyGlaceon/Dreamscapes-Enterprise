@@ -11,6 +11,7 @@ public class EraMovement : MonoBehaviour
     [SerializeField] Image blackScreen;
     [SerializeField] float wait = 15;
     [SerializeField] float nextSceneTime = 3;
+    [SerializeField] float moustacheTimer = 13;
     [SerializeField] float fadeSpeed = 1;
     [SerializeField] bool forward = false;
 
@@ -30,6 +31,14 @@ public class EraMovement : MonoBehaviour
     {
         if(move)
         {
+            if(GameManager.moustache)
+            {
+                moustacheTimer -= Time.deltaTime;
+                if(moustacheTimer < 0)
+                {
+                    if (GameManager.currentLevel == 4 && GameManager.moustache) SceneManager.LoadSceneAsync("CreditsMustache");
+                }
+            }
             wait -= Time.deltaTime;
             if (wait < 0)
             {
