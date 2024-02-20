@@ -1735,6 +1735,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c236cc9cb239efc4e984ca5fc5ddc993, type: 3}
   collectText: {fileID: 1381717701}
   allDreamsParticle: {fileID: 1753078520}
+  playerMustache: {fileID: 2128182099}
 --- !u!4 &480544671
 Transform:
   m_ObjectHideFlags: 0
@@ -37077,6 +37078,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bbfd8c873c1a064bb05244b27a2d47d, type: 3}
+--- !u!1 &2128182099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7181753061982918256, guid: 8bbfd8c873c1a064bb05244b27a2d47d, type: 3}
+  m_PrefabInstance: {fileID: 2128182098}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

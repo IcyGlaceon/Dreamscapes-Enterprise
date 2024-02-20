@@ -11,7 +11,7 @@ public class EraMovement : MonoBehaviour
     [SerializeField] Image blackScreen;
     [SerializeField] float wait = 15;
     [SerializeField] float nextSceneTime = 3;
-    [SerializeField] float moustacheTimer = 13;
+    [SerializeField] float moustacheTimer = 12;
     [SerializeField] float fadeSpeed = 1;
     [SerializeField] bool forward = false;
 

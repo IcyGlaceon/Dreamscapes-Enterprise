@@ -18,6 +18,7 @@ public class DialogSystem : MonoBehaviour
     [SerializeField] TMP_Text collectText;
     [Header("Secret")]
     [SerializeField] GameObject allDreamsParticle;
+    [SerializeField] GameObject playerMustache;
 
     private string[] eraVoiceLine1 = { "What is a damaging dream? The ones that take instead of give.", "The dreams that crush dreams.", "You've seen the result. The dwindling.", "A dream cannot sustain itself on the destruction of other dreams for long. It turns into an emptiness that spreads and consumes." };
     private string[] eraVoiceLine2 = { "Not many make it through the mirror maze. Still, I do not know your intentions.", "Many have tried hunting me to gain the power of wishing. None have succeeded.", "I am warning you: those with damaging dreams may not proceed further." };
@@ -90,6 +91,7 @@ public class DialogSystem : MonoBehaviour
                 if (GameManager.GainedCollectables == 0)
                 {
                     StartCoroutine(ShowDialog(polyNoDreams, polyFaces));
+                    playerMustache.SetActive(true);
                     GameManager.moustache = true;
                 }
                 else if (GameManager.GainedCollectables == 9)
