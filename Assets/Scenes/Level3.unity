@@ -1734,7 +1734,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5874c053a3bce4f4982f1174e69ab4e4, type: 3}
   - {fileID: 8300000, guid: c236cc9cb239efc4e984ca5fc5ddc993, type: 3}
   collectText: {fileID: 1381717701}
-  allDreamsParticle: {fileID: 0}
+  allDreamsParticle: {fileID: 1753078520}
 --- !u!4 &480544671
 Transform:
   m_ObjectHideFlags: 0
@@ -16629,7 +16629,7 @@ GameObject:
   m_Layer: 0
   m_Name: Confetti
   m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -21439,7 +21439,7 @@ Transform:
   m_GameObject: {fileID: 1753078520}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 119.27, y: 16.38, z: -4.574053}
+  m_LocalPosition: {x: 122, y: 16.38, z: -4.574053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
