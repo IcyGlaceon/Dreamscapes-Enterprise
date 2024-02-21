@@ -709,20 +709,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Chase Era to learn how to fix the world of Dreamscapes!
+  m_text: 'Chase Era the unicorn through 3 levels to learn how to fix the world of
+    Dreamscapes!
 
 
 
-    Jump across
-    platforms to avoid the Dwindling.
+    Jump across platforms to avoid the Dwindling.
 
 
 
-    Try to collect some lost dreams along
-    the way and return them to Poly.
+    Try
+    to collect some lost dreams along the way and return them to Poly the octopus.
 
 
-    (Touch to Continue)'
+    (Touch
+    to Continue)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fef7dc084ab64b442b2a9068800a1ebf, type: 2}
   m_sharedMaterial: {fileID: 1570404745636616043, guid: fef7dc084ab64b442b2a9068800a1ebf, type: 2}

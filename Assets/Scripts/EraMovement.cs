@@ -14,6 +14,7 @@ public class EraMovement : MonoBehaviour
     [SerializeField] float moustacheTimer = 12;
     [SerializeField] float fadeSpeed = 1;
     [SerializeField] bool forward = false;
+    [SerializeField] GameObject levelTxt;
 
     Vector2 movementTrans;
     [HideInInspector] public bool move = false;
@@ -47,6 +48,7 @@ public class EraMovement : MonoBehaviour
                     blackScreen.gameObject.SetActive(true);
                     color.a += fadeSpeed * Time.deltaTime;
                     blackScreen.color = color;
+                    if(levelTxt) levelTxt.SetActive(true);
                 }
                 spriteRenderer.flipX = true;
                 movementTrans += Vector2.right * speed * Time.deltaTime;
