@@ -2116,8 +2116,12 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1800
+      value: 3600
       objectReference: {fileID: 0}
     - target: {fileID: 700300599890986398, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: m_Name
@@ -2133,7 +2137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2737993443400166803, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 3600
+      value: 7200
       objectReference: {fileID: 0}
     - target: {fileID: 4956749377856326111, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: m_LocalPosition.x
