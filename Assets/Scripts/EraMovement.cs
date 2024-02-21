@@ -48,7 +48,7 @@ public class EraMovement : MonoBehaviour
                     blackScreen.gameObject.SetActive(true);
                     color.a += fadeSpeed * Time.deltaTime;
                     blackScreen.color = color;
-                    levelTxt.SetActive(true);
+                    if(levelTxt) levelTxt.SetActive(true);
                 }
                 spriteRenderer.flipX = true;
                 movementTrans += Vector2.right * speed * Time.deltaTime;

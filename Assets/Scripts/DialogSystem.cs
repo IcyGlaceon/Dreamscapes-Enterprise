@@ -94,7 +94,7 @@ public class DialogSystem : MonoBehaviour
                     playerMustache.SetActive(true);
                     GameManager.moustache = true;
                 }
-                else if (GameManager.GainedCollectables == 9)
+                else if (GameManager.GainedCollectables >= 9)
                 {
                     StartCoroutine(ShowDialog(polyAllDreams, polyFaces));
                     allDreamsParticle.SetActive(true);
