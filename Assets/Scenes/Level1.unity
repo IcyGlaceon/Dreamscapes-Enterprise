@@ -1482,6 +1482,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 244102098}
     m_Modifications:
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 700300599890986398, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: m_Name
       value: Dwindling
@@ -2530,6 +2538,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1808701419}
     m_Modifications:
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 700300599890986398, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: m_Name
       value: Dwindling
@@ -2757,6 +2773,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1675825180}
     m_Modifications:
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 56
+      objectReference: {fileID: 0}
     - target: {fileID: 700300599890986398, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: m_Name
       value: Dwindling
@@ -3466,6 +3490,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 174558326}
     m_Modifications:
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 700300599890986398, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: m_Name
       value: Dwindling
@@ -3531,6 +3563,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1750471544}
     m_Modifications:
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 700300599890986398, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: m_Name
       value: Dwindling
@@ -3596,6 +3636,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1051013494}
     m_Modifications:
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 76
+      objectReference: {fileID: 0}
     - target: {fileID: 700300599890986398, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: m_Name
       value: Dwindling
@@ -15817,6 +15865,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 340194750}
     m_Modifications:
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 96
+      objectReference: {fileID: 0}
     - target: {fileID: 700300599890986398, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: m_Name
       value: Dwindling
@@ -16763,6 +16819,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 866713381}
     m_Modifications:
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 700300599890986398, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: m_Name
       value: Dwindling
@@ -17296,6 +17360,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 143638263}
     m_Modifications:
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 139220429965193593, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 72
+      objectReference: {fileID: 0}
     - target: {fileID: 700300599890986398, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: m_Name
       value: Dwindling
