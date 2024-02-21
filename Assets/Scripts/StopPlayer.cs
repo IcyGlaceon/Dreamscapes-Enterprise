@@ -18,6 +18,7 @@ public class StopPlayer : MonoBehaviour
 			Background.maxSpeed = 0;
 			dialogSystem.showLevelDialog(levelNumber);
 			eraMovement.move = true;
+			
 		}
 	}
 } 

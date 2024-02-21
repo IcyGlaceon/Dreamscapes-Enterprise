@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public static int MaxCollectibles = 9;
     public static int currentLevel = 0;
     public static AudioSource collectSound;
+    public static bool moustache = false;
 
     private void Awake()
     {
@@ -40,6 +41,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(collectSound);
+        
     }
 }

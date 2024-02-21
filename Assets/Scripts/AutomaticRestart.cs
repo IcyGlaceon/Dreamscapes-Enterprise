@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class AutomaticRestart : MonoBehaviour
 {
-    float Timer = 60;
+    [SerializeField] float Timer = 60;
     public bool RestartUiUp = false;
     [SerializeField] GameObject RestartUI;
     [SerializeField] BackgroundMovement background;
@@ -42,10 +42,14 @@ public class AutomaticRestart : MonoBehaviour
 		}
 	}
 
+    public void ResetSpeed()
+    {
+        background.maxSpeed = 3;
+    }
+
 	public void Reset()
 	{
         Timer = 60;
-        background.maxSpeed = 3;
         RestartUI.SetActive(false);
         RestartUiUp = false;
 	}

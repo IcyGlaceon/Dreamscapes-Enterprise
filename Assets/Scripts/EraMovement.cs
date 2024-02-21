@@ -11,7 +11,10 @@ public class EraMovement : MonoBehaviour
     [SerializeField] Image blackScreen;
     [SerializeField] float wait = 15;
     [SerializeField] float nextSceneTime = 3;
+    [SerializeField] float moustacheTimer = 12;
     [SerializeField] float fadeSpeed = 1;
+    [SerializeField] bool forward = false;
+    [SerializeField] GameObject levelTxt;
 
     Vector2 movementTrans;
     [HideInInspector] public bool move = false;
@@ -29,16 +32,23 @@ public class EraMovement : MonoBehaviour
     {
         if(move)
         {
+            if(GameManager.moustache)
+            {
+                moustacheTimer -= Time.deltaTime;
+                if(moustacheTimer < 0)
+                {
+                    if (GameManager.currentLevel == 4 && GameManager.moustache) SceneManager.LoadSceneAsync("CreditsMustache");
+                }
+            }
             wait -= Time.deltaTime;
             if (wait < 0)
             {
                 if (blackScreen)
                 {
                     blackScreen.gameObject.SetActive(true);
-                    Debug.Log(blackScreen.gameObject.activeInHierarchy);
                     color.a += fadeSpeed * Time.deltaTime;
                     blackScreen.color = color;
-                    Debug.Log(blackScreen.color.a);
+                    if(levelTxt) levelTxt.SetActive(true);
                 }
                 spriteRenderer.flipX = true;
                 movementTrans += Vector2.right * speed * Time.deltaTime;
@@ -47,19 +57,21 @@ public class EraMovement : MonoBehaviour
                 nextSceneTime -= Time.deltaTime;
                 if (nextSceneTime < 0)
                 {
-                    if (GameManager.currentLevel == 4) SceneManager.LoadSceneAsync("StartScreen");
+                    if (GameManager.currentLevel == 4) SceneManager.LoadSceneAsync("Credits");
                     if (GameManager.currentLevel != 0 && GameManager.currentLevel != 1) SceneManager.LoadSceneAsync("Level" + GameManager.currentLevel);
                     Destroy(gameObject);
                 }
             }
         }
-        else if(!move && background.speed == 0)
+        else if(forward)
         {
-            
+            movementTrans += Vector2.right * speed * Time.deltaTime;
+            transform.position = movementTrans;
+            nextSceneTime -= Time.deltaTime;
+            if(nextSceneTime < 0) Destroy(gameObject);
         }
         else
         {
-            Debug.Log(background.speed);
             movementTrans += Vector2.left * background.speed * Time.deltaTime;
             transform.position = movementTrans;
         }

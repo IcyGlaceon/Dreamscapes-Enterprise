@@ -10,42 +10,43 @@ public class CharacterSelection : MonoBehaviour
     public void BlueCharacter()
     {
         GameManager.blueCharacter = true;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void GreenCharacter()
     {
         GameManager.greenCharacter = true;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void CyanCharacter()
     {
         GameManager.cyanCharacter = true;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void PinkCharacter()
     {
         GameManager.pinkCharacter = true; 
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void RedCharacter()
     {
         GameManager.redCharacter = true;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void YellowCharacter()
     {
         GameManager.yellowCharacter = true;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void Start()
     {
         GameManager.GainedCollectables = 0;
+        GameManager.moustache = false;
         GameManager.blueCharacter = false;
         GameManager.cyanCharacter = false;
         GameManager.yellowCharacter = false;
