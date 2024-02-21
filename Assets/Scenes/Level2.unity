@@ -3176,11 +3176,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2737993443400166803, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: ShapeModule.m_Scale.x
-      value: 1.9
+      value: 4.7
       objectReference: {fileID: 0}
     - target: {fileID: 2737993443400166803, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 152
+      value: 376
       objectReference: {fileID: 0}
     - target: {fileID: 4956749377856326111, guid: ecc2d1e4a99f57648a60aa25be02a9cf, type: 3}
       propertyPath: m_LocalScale.x
