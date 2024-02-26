@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class WaveMovement : MonoBehaviour
 {
+    /*
+     * moveSpeed = how fast the object moves
+     * frequency = how often the object moves up and down
+     * magnitude = how high/low the object will move from it's original line
+     */
+
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float frequency = 20f;
     [SerializeField] float magnitude = 0.5f;
