@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class GameManager : MonoBehaviour
 {
+    // This class exists in every scene and transfers in between them, keeping all the data.
+    // Variables must be public static so every class can access them
     public static GameManager Instance;
     public static bool pinkCharacter = false;
     public static bool blueCharacter = false;
@@ -21,13 +23,14 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-
+        // Keeps the game manager data in each scene
         if (Instance != null)
         {
             Instance = this;
             Destroy(gameObject);
             return;
         }
+        // This is how we store the collection sound
         collectSound = GetComponent<AudioSource>();
 
         Instance = this;
