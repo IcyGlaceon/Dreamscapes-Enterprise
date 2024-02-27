@@ -7,6 +7,8 @@ public class CharacterSelection : MonoBehaviour
 {
     [SerializeField] GameObject UI;
 
+    //The following functions change the players color
+
     public void BlueCharacter()
     {
         GameManager.blueCharacter = true;
@@ -45,6 +47,8 @@ public class CharacterSelection : MonoBehaviour
 
     public void Start()
     {
+        //These reset the players color
+
         GameManager.GainedCollectables = 0;
         GameManager.moustache = false;
         GameManager.blueCharacter = false;

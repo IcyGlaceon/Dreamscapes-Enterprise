@@ -15,7 +15,6 @@ public class Movement : MonoBehaviour
 
     bool isGrounded = false;
     public float storedPosition = 0;
-    private float jumpTime = 0;
 
     [SerializeField] Transform ground;
 
@@ -23,12 +22,13 @@ public class Movement : MonoBehaviour
     void Start()
     {
         storedPosition = player.position.x;
-        //anim.SetBool("IsBlue", true);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Moves the world when the player is moving
+
         if (player.position.x - storedPosition < -0.4 || player.position.x - storedPosition > 0.4)
         {
 			if (world != null)
@@ -40,6 +40,7 @@ public class Movement : MonoBehaviour
         }
         player.velocity = new Vector2(0, player.velocity.y);
 
+        //This checks if the player has hit the ground
 
         RaycastHit2D groundHit = Physics2D.Raycast(transform.position, Vector2.down, 1f, LayerMask.GetMask("Ground"));
         if (groundHit.collider != null)
@@ -51,6 +52,7 @@ public class Movement : MonoBehaviour
         }
         else 
         {
+            //Makes the player fall
             if (player.velocity.y <= -1)
             {
                 isFalling();
@@ -58,6 +60,7 @@ public class Movement : MonoBehaviour
         }
         Debug.Log(anim.GetCurrentAnimatorClipInfo(0)[0].clip.name);
         
+        //Changes the players color
 
         anim.SetBool("IsBlue", GameManager.blueCharacter);
         anim.SetBool("IsGreen", GameManager.greenCharacter);
@@ -65,6 +68,8 @@ public class Movement : MonoBehaviour
         anim.SetBool("IsRed", GameManager.redCharacter);
         anim.SetBool("IsPink", GameManager.pinkCharacter);
         anim.SetBool("IsYellow", GameManager.yellowCharacter);
+
+        //Makes the player jump
         if(Input.GetMouseButtonDown(0) && !restart.RestartUiUp && world.maxSpeed != 0)
         {
             Jump();
@@ -79,6 +84,8 @@ public class Movement : MonoBehaviour
 
     public void Jump()
     {
+        //Checks if the player is on the ground and not falling
+
         if (isGrounded && player.velocity.y == 0)
         {
             jumpSound.Play();
@@ -91,6 +98,8 @@ public class Movement : MonoBehaviour
 
     public void onGround()
     {
+        //Makes the player be on the ground
+
         isGrounded = true;
         anim.SetBool("IsRunning", true);
         anim.SetBool("IsFalling", false);
@@ -98,6 +107,8 @@ public class Movement : MonoBehaviour
 
     public void isFalling()
     {
+        //Makes the player fall
+
         isGrounded = false;
         anim.SetBool("IsRunning", false);
         anim.SetBool("IsFalling", true);
