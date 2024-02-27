@@ -81,21 +81,22 @@ public class Parallax : MonoBehaviour
         Scroll();
         CheckReset();
 
-		var objects = FindObjectsByType<BackgroundMovement>(FindObjectsSortMode.InstanceID);
-		foreach (var thing in objects)
-		{
-			string destination = Application.persistentDataPath + "/" + gameObject.name + ".log";
-			FileStream file;
+        // if the parallax isint working on bounceback, uncomment this and applcation.quit, build the game, bounce on the level that is broken and it usually fixes it
+		//var objects = FindObjectsByType<BackgroundMovement>(FindObjectsSortMode.InstanceID);
+		//foreach (var thing in objects)
+		//{
+		//	string destination = Application.persistentDataPath + "/" + gameObject.name + ".log";
+		//	FileStream file;
 
-			if (File.Exists(destination)) file = File.OpenWrite(destination);
-			else file = File.Create(destination);
-			string data_to_store = JsonUtility.ToJson(new GAData(BGMovement.bouncedBack, thing.bouncedBack), true);
-			using (StreamWriter writer = new StreamWriter(file))
-			{
-				writer.Write(data_to_store);
-			}
-			file.Close();
-		}
+		//	if (File.Exists(destination)) file = File.OpenWrite(destination);
+		//	else file = File.Create(destination);
+		//	string data_to_store = JsonUtility.ToJson(new GAData(BGMovement.bouncedBack, thing.bouncedBack), true);
+		//	using (StreamWriter writer = new StreamWriter(file))
+		//	{
+		//		writer.Write(data_to_store);
+		//	}
+		//	file.Close();
+		//}
 
         // Checks to see if player is in a slow zone
 		if (BGMovement.slow == false)
@@ -145,6 +146,7 @@ public class Parallax : MonoBehaviour
     }
 }
 
+// this is needed for the file logging. dont question it
 public class GAData
 {
     public bool bounced;

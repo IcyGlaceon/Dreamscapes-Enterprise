@@ -20,6 +20,7 @@ public class DialogSystem : MonoBehaviour
     [SerializeField] GameObject allDreamsParticle;
     [SerializeField] GameObject playerMustache;
 
+    // For timing purposes, the voice lines and faces are arrays on a timer
     private string[] eraVoiceLine1 = { "What is a damaging dream? The ones that take instead of give.", "The dreams that crush dreams.", "You've seen the result. The dwindling.", "A dream cannot sustain itself on the destruction of other dreams for long. It turns into an emptiness that spreads and consumes." };
     private string[] eraVoiceLine2 = { "Not many make it through the mirror maze. Still, I do not know your intentions.", "Many have tried hunting me to gain the power of wishing. None have succeeded.", "I am warning you: those with damaging dreams may not proceed further." };
     private string[] eraVoiceLine3 = { "If your intentions are pure,", "then I will tell you about wish magic. The power to make dreams reality.", "Perhaps, enough constructive dreaming will repair Dreamscapes and Happyton.", "I have prepared a trial for you. Another labyrinth.", "Not a test of your resolve, but a test of your dreams." };
@@ -35,15 +36,18 @@ public class DialogSystem : MonoBehaviour
 
     void Start()
     {
+        // Setting variables to default states
         voiceLineText.text = "";
         characterPicture.SetActive(false);
     }
 
     void Update()
     {
+        // Shows the number of collectables the player has in the UI
         collectText.text = GameManager.GainedCollectables.ToString() + " / 9";
     }
 
+    // This is the main function that displays all dialog
     public IEnumerator ShowDialog(string[] dialog, int[] faceNumbers = null, AudioClip voiceLine = null)
     {
         Image characterImage = characterPicture.GetComponent<Image>();
@@ -65,27 +69,35 @@ public class DialogSystem : MonoBehaviour
         characterPicture.SetActive(false);
     }
 
+    // This grabs the current currentLevel variable from StopPlayer. This displays the correct set of dialog for each level and spot in each level.
     public void showLevelDialog(int level)
     {
         GameManager.currentLevel = level;
         switch(level)
         {
+            // The very beginning of the game
             case 0:
                 StartCoroutine(ShowDialog(eraVoiceLineBeginning, eraFaces1, voiceLines[3]));
                 break;
+            // The ending of level 1
             case 1:
                 StartCoroutine(ShowDialog(eraVoiceLine1, eraFaces1, voiceLines[0]));
                 break;
+            // The ending of level 2
             case 2:
                 StartCoroutine(ShowDialog(eraVoiceLine2, eraFaces2, voiceLines[1]));
                 break;
+            // The ending of level 3
             case 3:
+                // Normal ending
                 if (!GameManager.moustache) StartCoroutine(ShowDialog(eraVoiceLine3, eraFaces3, voiceLines[2]));
                 else
                 {
+                    // Secret ending if player reaches polly with no dream and gets the moustache of power
                     StartCoroutine(ShowDialog(eraVoiceLineSecret, eraFacesSecret));
                 }
                 break;
+            // Polly dialog. The dialog chages based on the number of dreams the player has when they reach polly
             case 8:
                 int[] polyFaces = { 4, 4 };
                 if (GameManager.GainedCollectables == 0)
